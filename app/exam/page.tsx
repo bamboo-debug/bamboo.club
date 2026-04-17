@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { saveExamResult } from "@/lib/exam";
+import { getSupabaseBrowserClient } from "@/lib/supabase-browser";
 import {
   EXAM_PASSING_SCORE,
   EXAM_XP_FAIL,
@@ -25,7 +27,7 @@ export default function ExamPage() {
 
   const totalQuestions = questions.length;
   const question = questions[current];
-  const progressPercent = Math.round(((current) / totalQuestions) * 100);
+  const progressPercent = Math.round((current / totalQuestions) * 100);
 
   const score = useMemo(() => {
     if (examState !== "result") return null;
@@ -47,18 +49,23 @@ export default function ExamPage() {
     setRevealed(true);
   }
 
-  function handleNext() {
+  async function handleNext() {
     if (current < totalQuestions - 1) {
       setCurrent((prev) => prev + 1);
       setSelected(null);
       setRevealed(false);
-    } else {
-      // Último — guardar resultado
-      const finalAnswers = { ...answers, [question.id]: selected ?? -1 };
-      setAnswers(finalAnswers);
-      const correct = questions.filter((q) => finalAnswers[q.id] === q.correct).length;
-      const pct = Math.round((correct / totalQuestions) * 100);
-      const xp = pct >= EXAM_PASSING_SCORE ? EXAM_XP_PASS : EXAM_XP_FAIL;
+      return;
+    }
+
+    const finalAnswers = { ...answers, [question.id]: selected ?? -1 };
+    setAnswers(finalAnswers);
+
+    const correct = questions.filter((q) => finalAnswers[q.id] === q.correct).length;
+    const pct = Math.round((correct / totalQuestions) * 100);
+    const xp = pct >= EXAM_PASSING_SCORE ? EXAM_XP_PASS : EXAM_XP_FAIL;
+
+    // Mantener demo/local como respaldo visual
+    try {
       const progress = getDemoProgress();
       if (!progress.claimedActivities.includes("exam-final")) {
         saveDemoProgress({
@@ -67,8 +74,42 @@ export default function ExamPage() {
           claimedActivities: [...progress.claimedActivities, "exam-final"],
         });
       }
-      setExamState("result");
+    } catch (error) {
+      console.log("EXAM DEMO SAVE ERROR:", error);
     }
+
+    // Guardado real en Supabase
+    try {
+      const supabase = getSupabaseBrowserClient();
+
+      if (supabase) {
+        const {
+          data: { session },
+          error: sessionError,
+        } = await supabase.auth.getSession();
+
+        if (sessionError) {
+          console.log("EXAM SESSION ERROR:", sessionError);
+        }
+
+        if (session?.user) {
+          await saveExamResult({
+            userId: session.user.id,
+            score: pct,
+            passed: pct >= EXAM_PASSING_SCORE,
+            points: xp,
+          });
+        } else {
+          console.log("EXAM: usuario no logueado, no se guardó en Supabase.");
+        }
+      } else {
+        console.log("EXAM: supabase no disponible.");
+      }
+    } catch (error) {
+      console.log("EXAM SAVE RESULT ERROR:", error);
+    }
+
+    setExamState("result");
   }
 
   function handleRestart() {
@@ -79,7 +120,6 @@ export default function ExamPage() {
     setExamState("intro");
   }
 
-  /* ── INTRO ── */
   if (examState === "intro") {
     return (
       <main className="section">
@@ -116,11 +156,17 @@ export default function ExamPage() {
                 <li className="muted">· Podés tomarte el tiempo que necesites.</li>
                 <li className="muted">· Cada pregunta tiene una sola respuesta correcta.</li>
                 <li className="muted">· Vas a ver la explicación después de cada respuesta.</li>
-                <li className="muted">· Si no aprobás, sumás {EXAM_XP_FAIL} XP y podés intentarlo de nuevo.</li>
+                <li className="muted">
+                  · Si no aprobás, sumás {EXAM_XP_FAIL} XP y podés intentarlo de nuevo.
+                </li>
               </ul>
             </div>
 
-            <button className="btn btn-primary" style={{ width: "fit-content" }} onClick={() => setExamState("running")}>
+            <button
+              className="btn btn-primary"
+              style={{ width: "fit-content" }}
+              onClick={() => setExamState("running")}
+            >
               Comenzar examen
             </button>
           </div>
@@ -129,22 +175,15 @@ export default function ExamPage() {
     );
   }
 
-  /* ── RESULTADO ── */
   if (examState === "result") {
     return (
       <main className="section">
         <div className="container" style={{ maxWidth: 720 }}>
           <div className="card panel stack-lg" style={{ textAlign: "center" }}>
-            <div
-              className={`exam-result-badge ${passed ? "pass" : "fail"}`}
-            >
-              {score}%
-            </div>
+            <div className={`exam-result-badge ${passed ? "pass" : "fail"}`}>{score}%</div>
 
             <div className="stack-sm">
-              <h1 style={{ marginBottom: 0 }}>
-                {passed ? "¡Aprobaste!" : "Seguí intentando"}
-              </h1>
+              <h1 style={{ marginBottom: 0 }}>{passed ? "¡Aprobaste!" : "Seguí intentando"}</h1>
               <p className="muted body-relaxed">
                 {passed
                   ? `Respondiste correctamente ${correctCount} de ${totalQuestions} preguntas. Superaste el umbral de aprobación del ${EXAM_PASSING_SCORE}%.`
@@ -193,14 +232,12 @@ export default function ExamPage() {
     );
   }
 
-  /* ── PREGUNTA ACTIVA ── */
   const isLastQuestion = current === totalQuestions - 1;
 
   return (
     <main className="section">
       <div className="container" style={{ maxWidth: 720 }}>
         <div className="card panel stack-lg">
-          {/* Progreso */}
           <div>
             <div className="row-between row-wrap" style={{ marginBottom: 8 }}>
               <span className="exam-question-counter">
@@ -215,22 +252,20 @@ export default function ExamPage() {
             </div>
           </div>
 
-          {/* Tema */}
           <div className="row-wrap gap-sm">
             <span className="tag">{question.theme}</span>
           </div>
 
-          {/* Pregunta */}
           <div className="stack-sm">
             <h2 className="title-tight" style={{ fontSize: "1.25rem", lineHeight: 1.35 }}>
               {question.question}
             </h2>
           </div>
 
-          {/* Opciones */}
           <div className="answer-grid">
             {question.options.map((option, idx) => {
               let className = "answer-option";
+
               if (revealed) {
                 if (idx === question.correct) className += " correct";
                 else if (idx === selected && idx !== question.correct) className += " wrong";
@@ -254,7 +289,6 @@ export default function ExamPage() {
             })}
           </div>
 
-          {/* Explicación */}
           {revealed && (
             <div className={`alert ${selected === question.correct ? "success" : "error"}`}>
               <strong>{selected === question.correct ? "Correcto." : "Incorrecto."}</strong>{" "}
@@ -262,7 +296,6 @@ export default function ExamPage() {
             </div>
           )}
 
-          {/* Botones */}
           <div className="row-wrap gap-sm">
             {!revealed ? (
               <button
@@ -273,7 +306,7 @@ export default function ExamPage() {
                 Confirmar respuesta
               </button>
             ) : (
-              <button className="btn btn-primary" onClick={handleNext}>
+              <button className="btn btn-primary" onClick={() => void handleNext()}>
                 {isLastQuestion ? "Ver resultados" : "Siguiente pregunta →"}
               </button>
             )}
