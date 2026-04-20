@@ -13,11 +13,10 @@ export type UserProfile = {
 export type ModuleSection = {
   heading: string;
   body: string;
-  // Contenido extendido — aparece al presionar "Ver más"
   extended_body?: string;
   example?: {
-    label: string;   // ej: "Ejemplo real"
-    content: string; // el caso de agencia
+    label: string;
+    content: string;
   };
 };
 
@@ -26,6 +25,14 @@ export type LessonQuiz = {
   options: string[];
   correct: number;
   explanation: string;
+};
+
+export type ModuleResource = {
+  type: "book" | "article" | "video" | "podcast" | "tool";
+  title: string;
+  author?: string;
+  description: string;
+  url?: string;
 };
 
 export type Module = {
@@ -40,11 +47,13 @@ export type Module = {
   status: "available" | "locked" | "completed";
   theme: string;
   opening: string;
-  opening_extended?: string; // párrafo extra de apertura visible con "Ver más"
+  opening_extended?: string;
   sections: ModuleSection[];
   exercise: string;
   takeaway: string;
   quiz: LessonQuiz;
+  resources?: ModuleResource[];
+  hidden?: boolean;
 };
 
 export type Activity = {
@@ -76,7 +85,11 @@ export type LeaderboardEntry = {
   level_name: string;
 };
 
-export type WelcomeMessage = { title: string; body: string[]; cta: string };
+export type WelcomeMessage = {
+  title: string;
+  body: string[];
+  cta: string;
+};
 
 export type ClubSignupPayload = {
   firstName: string;

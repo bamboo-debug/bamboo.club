@@ -34,10 +34,7 @@ export const demoProfile: UserProfile = {
 };
 
 export const modules: Module[] = [
-  /* ─────────────────────────────────────────────
-     MES 1 · MÓDULO 1 · Fundamentos
-  ───────────────────────────────────────────── */
-  {
+{
     id: "m1",
     slug: "innovacion-en-agencia",
     title: "¿Qué es innovación en una agencia de verdad?",
@@ -117,10 +114,7 @@ export const modules: Module[] = [
     },
   },
 
-  /* ─────────────────────────────────────────────
-     MES 1 · MÓDULO 2 · Mentalidad
-  ───────────────────────────────────────────── */
-  {
+{
     id: "m2",
     slug: "mentalidad-innovadora",
     title: "Mentalidad innovadora en entornos creativos",
@@ -211,10 +205,7 @@ export const modules: Module[] = [
     },
   },
 
-  /* ─────────────────────────────────────────────
-     MES 2 · MÓDULO 3 · Cliente-centrismo
-  ───────────────────────────────────────────── */
-  {
+{
     id: "m3",
     slug: "entender-cliente-real",
     title: "Entender al cliente de verdad",
@@ -305,10 +296,7 @@ export const modules: Module[] = [
     },
   },
 
-  /* ─────────────────────────────────────────────
-     MES 2 · MÓDULO 4 · Cliente-centrismo
-  ───────────────────────────────────────────── */
-  {
+{
     id: "m4",
     slug: "mapa-de-empatia",
     title: "Mapa de empatía: ver lo que el cliente no dice",
@@ -388,10 +376,7 @@ export const modules: Module[] = [
     },
   },
 
-  /* ─────────────────────────────────────────────
-     MES 3 · MÓDULO 5 · Design Thinking
-  ───────────────────────────────────────────── */
-  {
+{
     id: "m5",
     slug: "design-thinking-intro",
     title: "Design Thinking: el método que ordena la creatividad",
@@ -483,10 +468,7 @@ export const modules: Module[] = [
     },
   },
 
-  /* ─────────────────────────────────────────────
-     MES 3 · MÓDULO 6 · Design Thinking
-  ───────────────────────────────────────────── */
-  {
+{
     id: "m6",
     slug: "como-definir-problemas",
     title: "Cómo definir un problema antes de resolverlo",
@@ -566,10 +548,7 @@ export const modules: Module[] = [
     },
   },
 
-  /* ─────────────────────────────────────────────
-     MES 4 · MÓDULOS 7-8 (sin expandir en esta versión)
-  ───────────────────────────────────────────── */
-  {
+{
     id: "m7",
     slug: "ideas-que-sobreviven",
     title: "Ideas que sobreviven",
@@ -595,7 +574,8 @@ export const modules: Module[] = [
       explanation: "Las ideas que avanzan combinan valor, claridad y capacidad de implementación. No viven solo del brillo inicial.",
     },
   },
-  {
+
+{
     id: "m8",
     slug: "prototipado-rapido",
     title: "Prototipar para aprender, no para impresionar",
@@ -621,7 +601,8 @@ export const modules: Module[] = [
       explanation: "Los prototipos son herramientas de aprendizaje, no de presentación. Su valor está en lo que revelan, no en lo que muestran.",
     },
   },
-  {
+
+{
     id: "m9", slug: "pensamiento-de-producto", title: "Pensamiento de producto para gente de agencia", description: "Cómo pasar de entregar proyectos únicos a construir soluciones que escalan, se repiten y generan valor sostenido.", month: "Mes 5", level_required: 3, xp_reward: 200, lessons: 6, status: "available", theme: "Producto",
     opening: "Una agencia que solo factura por horas o proyectos únicos tiene un techo estructural de crecimiento. El pensamiento de producto rompe ese techo: implica identificar una necesidad recurrente, construir una solución que pueda entregarse más de una vez y capturar valor de forma escalable.",
     sections: [
@@ -633,7 +614,8 @@ export const modules: Module[] = [
     takeaway: "El mayor activo que puede tener una agencia no es un cliente grande. Es un producto propio que escala sin depender de un solo equipo.",
     quiz: { question: "¿Qué diferencia fundamental tiene un producto respecto a un proyecto de agencia?", options: ["El producto es más caro de vender", "El producto se construye para un cliente específico", "El producto puede entregarse múltiples veces con costos marginales menores", "El proyecto tiene mayor margen de ganancia"], correct: 2, explanation: "La escalabilidad es la característica central del pensamiento de producto: se invierte una vez y se captura valor muchas veces." },
   },
-  {
+
+{
     id: "m10", slug: "modelo-de-negocio-canvas", title: "Business Model Canvas: diseñar cómo se captura valor", description: "Una herramienta visual para entender, cuestionar y rediseñar la manera en que una idea genera y sostiene ingresos.", month: "Mes 5", level_required: 3, xp_reward: 200, lessons: 5, status: "available", theme: "Producto",
     opening: "El Business Model Canvas no es un plan de negocios. Es un mapa visual de nueve bloques que describe cómo una organización crea, entrega y captura valor. Su poder está en que obliga a pensar en el modelo completo y en hacerlo visible de un vistazo.",
     sections: [
@@ -645,7 +627,8 @@ export const modules: Module[] = [
     takeaway: "Una buena idea sin un modelo de negocio sólido es un regalo sin destinatario.",
     quiz: { question: "¿Cuál es el bloque más importante del Business Model Canvas?", options: ["Estructura de costos", "Fuentes de ingreso", "Propuesta de valor", "Canales"], correct: 2, explanation: "La propuesta de valor es el núcleo del canvas porque conecta directamente con el problema del cliente y justifica la existencia del negocio." },
   },
-  {
+
+{
     id: "m11", slug: "liderazgo-innovacion", title: "Liderar la innovación sin tener el título", description: "Cómo generar cambio desde donde estás, construir aliados internos y lograr que tus ideas muevan a equipos enteros.", month: "Mes 6", level_required: 3, xp_reward: 220, lessons: 6, status: "available", theme: "Liderazgo",
     opening: "El liderazgo en innovación no viene con un cargo. Viene con la disposición a empujar ideas cuando nadie te lo pide, a conectar personas que no se hablan entre sí y a sostener el esfuerzo cuando la organización quiere volver a lo que ya conoce.",
     sections: [
@@ -657,7 +640,8 @@ export const modules: Module[] = [
     takeaway: "El liderazgo en innovación no espera permiso. Construye el contexto para que el permiso deje de ser necesario.",
     quiz: { question: "¿Qué es más efectivo para impulsar una idea de innovación en una organización?", options: ["Hacer una presentación muy detallada ante toda la empresa", "Esperar a tener el cargo formal", "Construir aliados estratégicos antes de presentar la idea en grande", "Implementar el cambio sin avisar"], correct: 2, explanation: "Los aliados estratégicos reducen la resistencia y amplifican el impacto. Preparar el terreno es parte del proceso de innovación." },
   },
-  {
+
+{
     id: "m12", slug: "cultura-de-experimentacion", title: "Construir una cultura de experimentación", description: "Cómo pasar de una organización que teme equivocarse a una que aprende más rápido que la competencia.", month: "Mes 6", level_required: 3, xp_reward: 220, lessons: 5, status: "available", theme: "Liderazgo",
     opening: "Una cultura de experimentación es una donde las hipótesis se prueban antes de ejecutarse a escala, donde los errores documentados valen más que los éxitos no entendidos y donde aprender más rápido es una ventaja competitiva.",
     sections: [
@@ -670,8 +654,7 @@ export const modules: Module[] = [
     quiz: { question: "¿Qué elemento es indispensable en un experimento bien diseñado?", options: ["Un presupuesto aprobado por dirección", "Una hipótesis clara con criterio de éxito definido de antemano", "Un equipo exclusivamente dedicado a innovación", "La aprobación del cliente antes de testear"], correct: 1, explanation: "Sin hipótesis y criterio de éxito previos, no hay experimento: hay improvisación. La claridad antes de actuar es lo que permite aprender sistemáticamente." },
   },
 
-
-  {
+{
     id: "m13", slug: "comunicacion-estrategica", title: "Comunicación estratégica: decir lo correcto al que decide",
     description: "Cómo adaptar el mensaje según el interlocutor para que tus ideas lleguen, convenzan y generen acción.",
     month: "Mes 7", level_required: 3, xp_reward: 240, lessons: 4, status: "available", theme: "Comunicación",
@@ -686,7 +669,8 @@ export const modules: Module[] = [
     takeaway: "Comunicar bien no es hablar con claridad. Es entender qué necesita escuchar cada persona para tomar la decisión correcta.",
     quiz: { question: "¿Qué es la pirámide invertida en comunicación estratégica?", options: ["Empezar con el contexto y terminar con la recomendación", "Empezar con la recomendación y luego presentar la evidencia", "Usar más datos que palabras", "Adaptar el tono según el tamaño de la audiencia"], correct: 1, explanation: "La pirámide invertida pone la conclusión primero. Esto respeta el tiempo del decisor y evita que la propuesta quede enterrada al final." },
   },
-  {
+
+{
     id: "m14", slug: "gestion-de-clientes-dificiles", title: "Gestión de clientes difíciles: convertir tensión en confianza",
     description: "Cómo manejar clientes exigentes, relaciones tensas y situaciones de crisis sin perder la calidad del trabajo ni el vínculo.",
     month: "Mes 7", level_required: 3, xp_reward: 240, lessons: 4, status: "available", theme: "Comunicación",
@@ -701,7 +685,8 @@ export const modules: Module[] = [
     takeaway: "El cliente más difícil es el que mejor enseña cómo funciona la relación cuando la presión es real.",
     quiz: { question: "¿Cuál es la mejor forma de manejar el scope creep con un cliente?", options: ["Ignorarlo para no generar conflicto", "Rechazarlo directamente", "Nombrarlo y ofrecer incluirlo como extensión o siguiente fase", "Incluirlo sin costo para mantener la relación"], correct: 2, explanation: "Nombrar el cambio sin confrontación protege el margen sin dañar la relación." },
   },
-  {
+
+{
     id: "m15", slug: "datos-para-no-data-scientists", title: "Datos para no data scientists",
     description: "Cómo leer, interpretar y usar datos para tomar mejores decisiones en cualquier área de una agencia, sin necesitar ser analista.",
     month: "Mes 8", level_required: 3, xp_reward: 250, lessons: 4, status: "available", theme: "Datos",
@@ -716,7 +701,8 @@ export const modules: Module[] = [
     takeaway: "Los datos no toman decisiones. Las personas con criterio toman decisiones con datos.",
     quiz: { question: "¿Qué diferencia un insight de una métrica?", options: ["El insight usa más datos", "El insight es más preciso", "El insight es una interpretación accionable que habilita una decisión", "El insight solo lo puede producir un analista"], correct: 2, explanation: "Un insight no es solo un dato en contexto — es una comprensión que lleva a una acción concreta." },
   },
-  {
+
+{
     id: "m16", slug: "tendencias-que-importan", title: "Tendencias que importan: cómo leer el futuro sin adivinar",
     description: "Un método para identificar señales débiles, separar tendencias reales de modas pasajeras y convertir ese conocimiento en ventaja competitiva.",
     month: "Mes 8", level_required: 3, xp_reward: 250, lessons: 4, status: "available", theme: "Datos",
@@ -731,7 +717,8 @@ export const modules: Module[] = [
     takeaway: "Ver una tendencia antes que los demás vale poco si no podés convertirla en una propuesta concreta.",
     quiz: { question: "¿Cuál es una señal de que algo es tendencia y no moda?", options: ["Aparece en todos los decks de la industria", "Resuelve un problema real y cambia la economía de algo", "Tiene mucha cobertura en medios especializados", "Es adoptada primero por grandes marcas"], correct: 1, explanation: "Las tendencias duraderas resuelven fricciones reales y cambian la estructura económica de una industria." },
   },
-  {
+
+{
     id: "m17", slug: "metodologias-agiles-agencias", title: "Metodologías ágiles aplicadas a agencias",
     description: "Cómo adaptar principios de Scrum, Kanban y trabajo iterativo al contexto de una agencia creativa para entregar mejor y con menos desgaste.",
     month: "Mes 9", level_required: 3, xp_reward: 260, lessons: 4, status: "available", theme: "Operaciones",
@@ -746,7 +733,8 @@ export const modules: Module[] = [
     takeaway: "La agilidad no acelera la creatividad — reduce el costo del error y acorta el tiempo entre tener una idea y saber si funciona.",
     quiz: { question: "¿Cuál es el principal beneficio de las entregas incrementales en proyectos de agencia?", options: ["Reducen el tiempo total del proyecto a la mitad", "Permiten detectar problemas antes de que sean costosos de corregir", "Eliminan la necesidad de un brief detallado", "Hacen que el cliente se involucre menos"], correct: 1, explanation: "Las entregas incrementales hacen el proyecto más seguro — los problemas se detectan cuando todavía son fáciles y baratos de corregir." },
   },
-  {
+
+{
     id: "m18", slug: "gestion-del-tiempo-creativo", title: "Gestión del tiempo en equipos creativos",
     description: "Cómo organizar el trabajo propio y del equipo para que la energía creativa se enfoque en lo que realmente genera valor.",
     month: "Mes 9", level_required: 3, xp_reward: 260, lessons: 4, status: "available", theme: "Operaciones",
@@ -761,7 +749,8 @@ export const modules: Module[] = [
     takeaway: "No es que no tengas tiempo. Es que todavía no decidiste qué no hacer.",
     quiz: { question: "¿Qué cuadrante de la matriz de Eisenhower genera más valor a largo plazo?", options: ["Urgente e importante", "Urgente pero no importante", "Importante pero no urgente", "Ni urgente ni importante"], correct: 2, explanation: "El cuadrante de importante pero no urgente es donde se construye el valor diferencial. Pero es también el que más fácilmente se sacrifica frente a la urgencia diaria." },
   },
-  {
+
+{
     id: "m19", slug: "storytelling-de-marca", title: "Storytelling de marca: construir narrativas que conectan",
     description: "Los principios del storytelling aplicados a la construcción de marca y comunicación, para que el mensaje sea memorable y genere acción.",
     month: "Mes 10", level_required: 4, xp_reward: 280, lessons: 4, status: "available", theme: "Creatividad",
@@ -776,7 +765,8 @@ export const modules: Module[] = [
     takeaway: "Las personas no recuerdan qué les dijiste. Recuerdan cómo las hiciste sentir con lo que contaste.",
     quiz: { question: "¿Quién debe ser el protagonista en el storytelling de marca?", options: ["La marca y sus valores", "El fundador de la empresa", "El consumidor y su transformación", "El producto y sus atributos"], correct: 2, explanation: "Las marcas más efectivas ponen al consumidor como protagonista. La marca es el aliado que ayuda a superar el conflicto y lograr la transformación." },
   },
-  {
+
+{
     id: "m20", slug: "creatividad-bajo-presion", title: "Creatividad bajo presión: cómo pensar mejor cuando el tiempo es corto",
     description: "Técnicas y frameworks para generar ideas de calidad en poco tiempo y mantener el nivel creativo en contextos de alta demanda.",
     month: "Mes 10", level_required: 4, xp_reward: 280, lessons: 4, status: "available", theme: "Creatividad",
@@ -791,7 +781,8 @@ export const modules: Module[] = [
     takeaway: "La creatividad no es un talento que tenés o no tenés. Es un músculo que se entrena y un método que se aprende.",
     quiz: { question: "¿Por qué las restricciones pueden activar la creatividad?", options: ["Porque reducen el tiempo necesario", "Porque eliminan las posibilidades obvias y fuerzan a explorar territorios menos transitados", "Porque hacen el trabajo más fácil de evaluar", "Porque reducen el número de personas involucradas"], correct: 1, explanation: "Las restricciones moderadas mejoran el output creativo porque eliminan las soluciones obvias y fuerzan al cerebro a encontrar caminos alternativos." },
   },
-  {
+
+{
     id: "m21", slug: "propuesta-de-valor", title: "Construir una propuesta de valor que el cliente entienda en 30 segundos",
     description: "Cómo articular con claridad qué hace tu agencia, para quién y por qué es diferente, de manera que resuene inmediatamente.",
     month: "Mes 11", level_required: 4, xp_reward: 300, lessons: 4, status: "available", theme: "Estrategia",
@@ -806,7 +797,8 @@ export const modules: Module[] = [
     takeaway: "Si no podés explicar en 30 segundos por qué alguien debería contratarte a vos y no a tu competencia, esa es la primera innovación que necesitás hacer.",
     quiz: { question: "¿Por qué una propuesta de valor más específica suele ser más efectiva?", options: ["Porque requiere menos palabras", "Porque excluye a los competidores", "Porque genera más confianza en las personas para quienes es relevante", "Porque es más fácil de recordar"], correct: 2, explanation: "La especificidad genera confianza. Cuando una propuesta describe exactamente el problema del interlocutor, ese interlocutor siente que la agencia los entiende." },
   },
-  {
+
+{
     id: "m22", slug: "innovacion-en-modelo-de-negocio", title: "Innovar el modelo de negocio de tu agencia",
     description: "Cómo identificar oportunidades para generar ingresos más allá del fee por hora y construir fuentes de valor más sostenibles y escalables.",
     month: "Mes 11", level_required: 4, xp_reward: 300, lessons: 4, status: "available", theme: "Estrategia",
@@ -821,7 +813,8 @@ export const modules: Module[] = [
     takeaway: "El modelo de negocio de una agencia no es un dato fijo — es una decisión que puede innovarse como cualquier otra parte del negocio.",
     quiz: { question: "¿Cuál es el problema estructural principal del fee por hora?", options: ["Es difícil de administrar internamente", "Desconecta la remuneración del valor generado y penaliza la eficiencia", "No permite cobrar proyectos grandes", "Requiere demasiada supervisión del cliente"], correct: 1, explanation: "El fee por hora desconecta el precio del impacto y crea un incentivo perverso. Los modelos orientados a valor alinean la remuneración con los resultados." },
   },
-  {
+
+{
     id: "m23", slug: "equipos-de-alto-rendimiento", title: "Construir y sostener equipos de alto rendimiento",
     description: "Qué condiciones hacen que un equipo creativo funcione en su mejor nivel y cómo generarlas aunque no tengas el cargo de líder.",
     month: "Mes 12", level_required: 4, xp_reward: 320, lessons: 4, status: "available", theme: "Liderazgo avanzado",
@@ -836,7 +829,8 @@ export const modules: Module[] = [
     takeaway: "El mejor equipo no es el que tiene los mejores individuos — es el que tiene las mejores condiciones para que personas buenas hagan su mejor trabajo.",
     quiz: { question: "Según Lencioni, ¿cuál es la base de las cinco disfunciones de un equipo?", options: ["La falta de resultados claros", "La falta de confianza", "El exceso de conflicto", "La falta de un líder fuerte"], correct: 1, explanation: "La falta de confianza es la disfunción base. Sin ella, el equipo no puede tener conflictos productivos, comprometerse con decisiones ni enfocarse en resultados colectivos." },
   },
-  {
+
+{
     id: "m24", slug: "tu-carrera-como-proyecto-de-innovacion", title: "Tu carrera como proyecto de innovación",
     description: "Cómo aplicar todos los principios de Bamboo a la gestión consciente de tu propio desarrollo profesional para crecer con intención.",
     month: "Mes 12", level_required: 4, xp_reward: 320, lessons: 4, status: "available", theme: "Liderazgo avanzado",
@@ -852,6 +846,259 @@ export const modules: Module[] = [
     quiz: { question: "¿Cuál de estos movimientos de carrera suma principalmente perspectiva y nuevas capacidades?", options: ["El movimiento vertical", "El movimiento lateral", "El movimiento de profundidad", "El movimiento de consolidación"], correct: 1, explanation: "El movimiento lateral — cambiar de función o industria manteniendo el nivel — suma perspectiva y capacidades diversas para ampliar el repertorio." },
   },
 
+{
+    id: "m25", slug: "neurociencia-del-aprendizaje", title: "Neurociencia del aprendizaje: cómo el cerebro cambia con la práctica",
+    description: "Qué dice la ciencia sobre cómo aprendemos de verdad y cómo aplicarlo para que Bamboo (y cualquier aprendizaje) se convierta en cambio real.",
+    month: "Mes 13", level_required: 4, xp_reward: 340, lessons: 4, status: "available", theme: "Ciencia aplicada",
+    opening: "Leer sobre innovación no te hace innovador. Escuchar una charla inspiradora no cambia cómo trabajás la semana siguiente. El aprendizaje real — el que transforma comportamientos — ocurre de una manera específica que la neurociencia lleva décadas estudiando. Entender ese mecanismo es la diferencia entre acumular información y desarrollar verdaderas capacidades.",
+    sections: [
+      { heading: "Cómo se forma un hábito en el cerebro", body: "El aprendizaje que dura no ocurre en una sesión de estudio — ocurre cuando el cerebro consolida una red neuronal a través de la repetición espaciada en el tiempo. Cada vez que practicás una habilidad con dificultad deseable, esa red se fortalece. Cada vez que repassás sin esfuerzo, se debilita.", extended_body: "La mielinización es el proceso por el cual las conexiones neuronales que se usan frecuentemente se recubren de una capa de mielina que las hace más rápidas y eficientes. Un pianista que practica durante años no solo sabe más sobre piano — su cerebro literalmente cambia. Lo mismo aplica a la habilidad de detectar fricciones, formular preguntas correctas o dar feedback constructivo: son redes neuronales que se construyen con práctica deliberada.", example: { label: "Ejemplo real", content: "Un equipo de strategy en una agencia implementó un ritual de 10 minutos al inicio de cada reunión: cada persona nombraba una fricción que había observado en la semana. Al principio costaba — nadie sabía bien qué buscar. Después de tres meses, el equipo detectaba fricciones en tiempo real durante las reuniones con clientes sin necesitar el ritual. La habilidad se había automatizado." } },
+      { heading: "El error como maestro: por qué equivocarse acelera el aprendizaje", body: "El cerebro aprende más de los errores que de los aciertos. Cuando cometés un error y lo reconocés, el cerebro libera norepinefrina — un neurotransmisor que aumenta la atención y la plasticidad neuronal. Ese estado es óptimo para el aprendizaje.", extended_body: "La teoría del aprendizaje por error sugiere que el cerebro hace predicciones constantes sobre lo que va a pasar. Cuando la realidad no coincide con la predicción, hay un error de predicción que fuerza al cerebro a actualizar su modelo del mundo. Por eso las simulaciones, los roleplays y los casos de estudio con desenlaces inesperados son tan efectivos: generan errores controlados que aceleran el aprendizaje." },
+      { heading: "Recuperación espaciada: el método que multiplica la retención", body: "Estudiar una hora el día antes de un examen produce mucho menos retención que estudiar 15 minutos por día durante cuatro días. La recuperación espaciada — volver a revisar material en intervalos crecientes — es uno de los métodos de aprendizaje con mayor evidencia científica.", extended_body: "El olvido no es el enemigo del aprendizaje — es parte del proceso. Cada vez que intentás recordar algo que empezaste a olvidar, el esfuerzo de recuperación fortalece la memoria más que si lo recordaras fácilmente. Las apps de flashcards como Anki usan este principio. Pero en el contexto de Bamboo, se aplica así: revisitar los conceptos de un módulo anterior mientras avanzás en uno nuevo produce retención mucho mayor que terminar el módulo y no volver a él nunca." },
+      { heading: "Del conocimiento al comportamiento: el paso que nadie enseña", body: "El gap más grande en cualquier programa de formación no está entre no saber y saber — está entre saber y hacer. La neurociencia identifica tres condiciones para que el conocimiento se traduzca en comportamiento: la intención de implementación, la práctica en contexto real, y el feedback inmediato.", extended_body: "Una intención de implementación no es 'voy a ser más innovador'. Es 'cuando llegue a la próxima reunión de brief, voy a hacer al menos una pregunta sobre la ansiedad real detrás del pedido del cliente'. Esa especificidad — cuándo, dónde, cómo exactamente — multiplica por tres la probabilidad de que el comportamiento ocurra según investigaciones de Peter Gollwitzer." },
+    ],
+    exercise: "Elegí una habilidad de los módulos anteriores que querés desarrollar. Diseñá un plan de práctica deliberada para los próximos 30 días: qué vas a practicar exactamente, cuándo, cómo vas a medir el progreso, y cuál es tu intención de implementación específica para la próxima situación laboral relevante.",
+    takeaway: "No aprendés lo que estudiás. Aprendés lo que practicás con dificultad, revisás con frecuencia y aplicás en contexto real.",
+    quiz: { question: "¿Qué produce el cerebro cuando comete un error reconocido que facilita el aprendizaje?", options: ["Cortisol, que activa la memoria de largo plazo", "Norepinefrina, que aumenta la atención y la plasticidad neuronal", "Dopamina, que genera la sensación de éxito", "Serotonina, que estabiliza el estado de ánimo"], correct: 1, explanation: "El error reconocido libera norepinefrina, que pone al cerebro en un estado de mayor atención y plasticidad — óptimo para actualizar modelos y aprender." },
+    resources: [
+      { type: "book", title: "Make It Stick: The Science of Successful Learning", author: "Peter Brown, Henry Roediger, Mark McDaniel", description: "El libro más accesible sobre la ciencia del aprendizaje efectivo. Destruye mitos como el releer y el subrayar, y explica con evidencia qué métodos funcionan de verdad.", url: "https://www.amazon.com/Make-Stick-Science-Successful-Learning/dp/0674729013" },
+      { type: "book", title: "The Talent Code", author: "Daniel Coyle", description: "Investiga qué tienen en común los lugares del mundo que producen talento desproporcionado — desde canchas de tenis en Rusia hasta estudios de grabación en Nashville. La respuesta tiene que ver con la mielinización y la práctica profunda.", url: "https://www.amazon.com/Talent-Code-Greatness-Born-Grown/dp/055380684X" },
+      { type: "article", title: "Spaced Repetition: A Guide to the Technique", author: "Gwern Branwen", description: "Análisis exhaustivo de la evidencia detrás de la recuperación espaciada. Técnico pero muy completo.", url: "https://gwern.net/spaced-repetition" },
+    ],
+  },
+
+{
+    id: "m26", slug: "economia-conductual-decisiones", title: "Economía conductual: por qué las personas no deciden de manera racional",
+    description: "Cómo los sesgos cognitivos afectan las decisiones de clientes, equipos y vos mismo, y cómo diseñar estrategias que trabajen con la psicología humana en lugar de contra ella.",
+    month: "Mes 13", level_required: 4, xp_reward: 340, lessons: 4, status: "available", theme: "Ciencia aplicada",
+    opening: "Durante décadas, la economía asumió que las personas toman decisiones racionales: evalúan opciones, calculan beneficios y eligen la mejor alternativa disponible. La economía conductual demostró que eso es una ficción. Las personas deciden con atajos cognitivos, emociones y sesgos que operan por debajo de la conciencia. En una agencia, entender esos mecanismos cambia cómo diseñás campañas, cómo presentás propuestas y cómo liderás equipos.",
+    sections: [
+      { heading: "Los sesgos más relevantes para una agencia", body: "De los más de 200 sesgos cognitivos documentados, hay cinco que aparecen constantemente en el trabajo de agencias. El sesgo de anclaje hace que el primer número que escucha un cliente se convierta en la referencia para evaluar todo lo que sigue. El sesgo de confirmación hace que las personas busquen información que confirme lo que ya creen. El efecto de encuadre hace que la misma información produzca decisiones diferentes según cómo se presenta.", extended_body: "El sesgo de status quo es especialmente relevante en innovación: las personas prefieren el estado actual de las cosas aunque una alternativa objetivamente mejor esté disponible. Esto explica por qué los clientes aprueban lo que ya conocen y rechazan lo nuevo aunque sea mejor. No es irracionalidad — es conservación de energía cognitiva. El cerebro usa el camino conocido porque es eficiente.", example: { label: "Ejemplo real", content: "Una agencia presentaba siempre tres opciones de presupuesto: básico, estándar y premium. Descubrieron que el 70% de los clientes elegía la opción del medio independientemente de los valores. Al reencuadrar la presentación y empezar con la opción premium (anclaje alto), la proporción de clientes que elegía la opción del medio aumentó significativamente — y esa opción tenía un precio 30% mayor que antes." } },
+      { heading: "Arquitectura de decisiones: diseñar el contexto para mejores elecciones", body: "Richard Thaler y Cass Sunstein acuñaron el término 'nudge' para describir intervenciones que modifican el contexto de una decisión sin eliminar opciones ni cambiar incentivos económicos. En una agencia, la arquitectura de decisiones aplica tanto al diseño de campañas como a la estructura de propuestas y reuniones.", extended_body: "Tres nudges clásicos: la opción por defecto (lo que pasa si no se decide activamente — ponerla bien diseñada guía hacia el resultado deseado), la norma social (mostrar que otros similares hacen X aumenta la probabilidad de que alguien haga X), y la simplificación (reducir la complejidad de una decisión aumenta la probabilidad de que se tome en la dirección correcta)." },
+      { heading: "Cómo los sesgos afectan la dinámica interna de tu equipo", body: "Los sesgos cognitivos no solo afectan a los clientes — afectan a los equipos creativos constantemente. El pensamiento grupal hace que los equipos converjan prematuramente en la primera idea aceptable. El sesgo de disponibilidad hace que las soluciones más recordadas parezcan las mejores.", extended_body: "El sesgo de sunk cost es especialmente destructivo en agencias: una vez que se invirtió tiempo y energía en una dirección creativa, el equipo resiste cambiarla aunque haya señales claras de que no está funcionando. Nombrar ese sesgo en voz alta cuando aparece — 'creo que estamos cayendo en el sunk cost' — es una de las intervenciones más efectivas para cortarlo." },
+      { heading: "Usar la economía conductual éticamente", body: "El conocimiento de los sesgos cognitivos puede usarse para ayudar a las personas a tomar mejores decisiones — o para manipularlas. La diferencia entre un nudge ético y una manipulación está en si el cambio de comportamiento beneficia genuinamente a quien lo experimenta.", extended_body: "En comunicación de marca, la línea es clara: usar arquitectura de decisiones para que una persona elija un producto que le sirve es ético. Usar sesgos para que compre algo que no necesita o que le hace daño no lo es. Las agencias que construyen reputación de largo plazo son las que aplican estos principios en beneficio genuino del consumidor, no solo del cliente que les paga." },
+    ],
+    exercise: "Identificá un momento reciente donde tomaste una decisión (de trabajo, de compra, de relación con un cliente) y analizala buscando qué sesgo cognitivo pudo haber influido. Luego elegí una presentación o propuesta próxima y aplicá conscientemente un principio de arquitectura de decisiones para mejorarla.",
+    takeaway: "Las personas no deciden con lógica — deciden con atajos. Diseñar con eso en mente es más honesto y más efectivo que ignorarlo.",
+    quiz: { question: "¿Qué es un nudge en arquitectura de decisiones?", options: ["Una restricción que elimina opciones no deseadas", "Una intervención que modifica el contexto de una decisión sin eliminar opciones", "Un incentivo económico para cambiar comportamiento", "Una campaña publicitaria basada en emociones"], correct: 1, explanation: "Un nudge modifica cómo se presenta una decisión — la opción por defecto, el orden, el encuadre — sin eliminar alternativas ni cambiar incentivos económicos. Trabaja con la psicología humana en lugar de ignorarla." },
+    resources: [
+      { type: "book", title: "Thinking, Fast and Slow", author: "Daniel Kahneman", description: "El libro fundacional de la economía conductual. Kahneman explica la diferencia entre el sistema 1 (rápido, intuitivo, emocional) y el sistema 2 (lento, deliberado, lógico) y cómo cada uno domina según el contexto.", url: "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555" },
+      { type: "book", title: "Nudge: Improving Decisions About Health, Wealth, and Happiness", author: "Richard Thaler y Cass Sunstein", description: "El libro que popularizó el concepto de nudge y arquitectura de decisiones. Lleno de ejemplos concretos de cómo el contexto de una decisión determina su resultado.", url: "https://www.amazon.com/Nudge-Improving-Decisions-Health-Happiness/dp/014311526X" },
+      { type: "book", title: "Predictably Irrational", author: "Dan Ariely", description: "Más accesible que Kahneman, Ariely explica con humor y casos concretos por qué las personas toman decisiones que van contra su propio interés — y siempre de maneras predecibles.", url: "https://www.amazon.com/Predictably-Irrational-Hidden-Forces-Decisions/dp/0061353248" },
+    ],
+  },
+
+{
+    id: "m27", slug: "inteligencia-artificial-agencias", title: "Inteligencia artificial en agencias: oportunidad real vs. hype",
+    description: "Cómo la IA generativa está transformando el trabajo creativo, qué capacidades humanas se vuelven más valiosas y cómo posicionarse estratégicamente frente al cambio.",
+    month: "Mes 14", level_required: 4, xp_reward: 360, lessons: 4, status: "available", theme: "Tecnología",
+    opening: "La IA generativa no va a reemplazar a las personas creativas — va a reemplazar a las personas creativas que no saben usarla. Esa frase, repetida en muchos contextos, tiene una verdad parcial: lo que cambia no es si los creativos seguirán siendo necesarios, sino qué tipo de capacidades creativas tendrán más valor en un contexto donde la producción de contenido se automatiza parcialmente.",
+    sections: [
+      { heading: "Qué puede hacer la IA y qué no puede (todavía)", body: "La IA generativa es extraordinariamente buena en tareas de síntesis, variación y producción a escala: generar versiones de un mismo copy para diferentes audiencias, producir imágenes a partir de descripciones, resumir documentos largos, traducir y adaptar contenido. Es significativamente peor en tareas que requieren comprensión profunda de contexto, criterio estratégico y empatía genuina.", extended_body: "Las tareas que la IA hace mejor que un humano promedio hoy: primer borrador de cualquier formato de texto, variaciones de concepto, búsqueda de referencias y benchmarks, síntesis de información dispersa, y producción visual básica. Las tareas donde un humano con criterio sigue siendo superior: definir el problema correcto, leer la dinámica emocional de una relación con un cliente, tomar decisiones estratégicas con información incompleta, y crear trabajo con una perspectiva genuinamente original.", example: { label: "Ejemplo real", content: "Una agencia de contenidos digitales implementó IA para generar primeros borradores de artículos de blog. El tiempo de producción bajó un 60%. Pero descubrieron algo inesperado: los editores pasaban el mismo tiempo que antes — ahora editando borradores de IA en lugar de escribir desde cero. La calidad final dependía completamente del criterio editorial humano. La IA aceleró la producción pero no reemplazó el juicio." } },
+      { heading: "El prompt como nueva habilidad profesional", body: "La calidad del output de una IA depende directamente de la calidad del input. Saber formular prompts precisos, dar contexto relevante, especificar el formato deseado y iterar sobre el resultado es una habilidad que se puede aprender y que marca una diferencia enorme en la productividad.", extended_body: "Un buen prompt para trabajo creativo tiene cinco elementos: rol (quién es la IA en este contexto), objetivo (qué resultado específico se busca), contexto (información de fondo relevante), restricciones (qué no debe hacer), y formato (cómo debe presentar el resultado). La diferencia entre 'escribí un email de seguimiento para un cliente' y un prompt bien estructurado con los cinco elementos puede ser la diferencia entre un borrador genérico y uno que parece escrito por alguien que conoce al cliente." },
+      { heading: "Cómo las agencias están integrando IA hoy", body: "Las agencias que están integrando IA de manera más efectiva no son las que reemplazaron personas con herramientas — son las que redefinieron el rol de sus personas en función de lo que la IA no puede hacer.", extended_body: "Tres modelos de integración que están funcionando. El modelo de aceleración: la IA produce volumen y los creativos curan, editan y elevan la calidad. El modelo de exploración: la IA genera 20 variaciones de un concepto y los creativos identifican cuáles tienen potencial y los desarrollan. El modelo de síntesis: la IA procesa grandes volúmenes de datos de consumidor y los estrategas interpretan los patrones para generar insights." },
+      { heading: "Las capacidades que se vuelven más valiosas con la IA", body: "Si la IA iguala el piso de calidad en producción de contenido, lo que diferencia a los mejores no es la velocidad de producción — es el criterio para saber qué producir, el juicio para evaluar calidad, y la capacidad de construir relaciones de confianza con clientes.", extended_body: "Las tres capacidades que más se revalorizan en un mundo con IA: el pensamiento estratégico (definir qué problema resolver antes de producir cualquier cosa), la inteligencia emocional (leer relaciones, gestionar conflictos, inspirar equipos), y la originalidad genuina (las perspectivas que vienen de experiencias vividas, no de patrones estadísticos sobre texto existente)." },
+    ],
+    exercise: "Elegí una tarea de tu trabajo diario que lleve más de 30 minutos. Intentá completarla usando IA (ChatGPT, Claude, Gemini u otra) con un prompt bien estructurado. Evaluá el resultado: ¿qué parte fue útil? ¿qué tuviste que corregir o agregar? ¿qué aprendiste sobre cómo formular mejor el prompt?",
+    takeaway: "La IA no reemplaza el criterio — lo amplifica. Los que tengan más criterio van a sacar más provecho de la IA que los que tengan menos.",
+    quiz: { question: "¿Cuál de estas tareas es donde la IA generativa tiene mayor ventaja sobre un humano promedio?", options: ["Definir el problema estratégico correcto antes de ejecutar", "Leer la dinámica emocional de una relación con un cliente", "Generar múltiples variaciones de un mismo copy para diferentes audiencias", "Crear perspectivas originales basadas en experiencias vividas"], correct: 2, explanation: "La IA es excepcionalmente buena en síntesis, variación y producción a escala. Las tareas de criterio estratégico, empatía genuina y originalidad basada en experiencia siguen siendo dominio humano." },
+    resources: [
+      { type: "book", title: "Co-Intelligence: Living and Working with AI", author: "Ethan Mollick", description: "El libro más equilibrado y actualizado sobre cómo trabajar con IA. Mollick, investigador de Wharton, combina evidencia con perspectiva práctica.", url: "https://www.amazon.com/Co-Intelligence-Living-Working-Ethan-Mollick/dp/059371671X" },
+      { type: "tool", title: "Anthropic Prompt Library", description: "Colección de prompts bien estructurados para diferentes casos de uso profesional. Excelente punto de partida para aprender a formular prompts efectivos.", url: "https://docs.anthropic.com/en/prompt-library/library" },
+      { type: "article", title: "How to Use AI to Do Stuff: An Opinionated Guide", author: "Ethan Mollick", description: "Guía práctica y actualizada de cómo usar IA en el trabajo real. Directo y sin hype.", url: "https://www.oneusefulthing.org/p/how-to-use-ai-to-do-stuff-an-opinionated" },
+      { type: "tool", title: "ChatGPT", description: "El modelo de OpenAI. Útil para ideación, borradores, síntesis y análisis.", url: "https://chat.openai.com" },
+    ],
+  },
+
+{
+    id: "m28", slug: "sostenibilidad-y-comunicacion", title: "Sostenibilidad y comunicación: más allá del greenwashing",
+    description: "Cómo comunicar compromisos de sostenibilidad de manera creíble, qué es el greenwashing y por qué las marcas que lo hacen pierden más de lo que ganan.",
+    month: "Mes 14", level_required: 4, xp_reward: 360, lessons: 4, status: "available", theme: "Tecnología",
+    opening: "La sostenibilidad pasó de ser un diferencial a ser una expectativa básica de consumidores, inversores y reguladores. El problema es que muchas marcas respondieron con comunicación superficial que no resiste el escrutinio — y el mercado lo descubrió. Hoy, comunicar sostenibilidad mal es más dañino que no comunicarla.",
+    sections: [
+      { heading: "Qué es el greenwashing y por qué es un riesgo real", body: "Greenwashing es la práctica de presentar a una empresa, producto o servicio como más sostenible de lo que realmente es. Puede ser intencional o resultado de ambigüedad y falta de rigor. En cualquier caso, tiene consecuencias reales: pérdida de confianza, cobertura mediática negativa, y en algunos mercados, consecuencias legales.", extended_body: "Las formas más comunes de greenwashing detectadas por reguladores y activistas: afirmaciones vagas como 'eco-friendly' sin evidencia, destacar un atributo ambiental menor mientras se ignoran impactos mayores, usar imágenes y colores 'naturales' que no corresponden a prácticas reales, y certificaciones inventadas o sin respaldo verificable. La Unión Europea está avanzando en regulaciones que prohibirían muchas de estas prácticas.", example: { label: "Ejemplo real", content: "Una marca de moda rápida lanzó una línea 'Conscious' con materiales reciclados que representaban el 1% de su producción total. Los medios especializados lo detectaron y la cobertura negativa superó ampliamente la cobertura positiva que habría generado un lanzamiento honesto y proporcionado. La marca perdió credibilidad en exactamente el segmento que quería conquistar." } },
+      { heading: "Cómo evaluar si una marca tiene credibilidad ambiental real", body: "Las marcas con credibilidad ambiental real comparten tres características: sus compromisos son específicos y medibles (no 'reducir emisiones' sino 'reducir emisiones scope 1 y 2 en un 50% para 2030 con línea base 2019'), reportan progreso aunque sea imperfecto, y reconocen sus limitaciones en lugar de presentar una imagen de perfección.", extended_body: "El marco SBTi (Science Based Targets initiative) y los reportes GRI (Global Reporting Initiative) son estándares de credibilidad reconocidos que permiten comparar compromisos entre empresas. Una agencia que entiende estos marcos puede ayudar a sus clientes a comunicar con rigor lo que genuinamente están haciendo — que siempre es más persuasivo que exagerar." },
+      { heading: "Comunicar sostenibilidad de manera efectiva y honesta", body: "La comunicación de sostenibilidad más efectiva no exagera ni minimiza — contextualiza. Muestra el punto de partida, el camino recorrido, los desafíos encontrados y el destino al que se apunta. Esa narrativa de progreso honesto es más creíble y más inspiradora que la afirmación de perfección.", extended_body: "Tres principios para comunicar sostenibilidad con credibilidad. Primero, especificidad: datos concretos en lugar de afirmaciones genéricas. Segundo, proporcionalidad: no destacar un logro menor mientras se ignoran impactos mayores. Tercero, continuidad: la sostenibilidad no es una campaña — es una narrativa que se construye en el tiempo con acciones verificables." },
+      { heading: "El rol de las agencias en la transición hacia la sostenibilidad", body: "Las agencias tienen un rol activo en la transición hacia la sostenibilidad — no solo como comunicadores de los compromisos de sus clientes, sino como organizaciones que modelan las prácticas que promueven.", extended_body: "Las agencias que más se están diferenciando en este espacio son las que desarrollaron capacidad interna para evaluar la credibilidad de los compromisos de sus clientes antes de comunicarlos. Eso implica conocer los estándares de reporte, entender la cadena de valor de las industrias en las que trabajan, y tener la valentía de decirle a un cliente que su comunicación de sostenibilidad no tiene base suficiente para ser creíble." },
+    ],
+    exercise: "Elegí un cliente o marca que hayas trabajado recientemente. Investigá cuáles son sus compromisos públicos de sostenibilidad. Evaluálos usando los tres principios del módulo: ¿son específicos y medibles? ¿Son proporcionales al impacto real? ¿Hay continuidad y reporte de progreso? ¿Qué recomendarías cambiar en su comunicación?",
+    takeaway: "Comunicar sostenibilidad bien es más difícil que comunicarla mal — pero genera un activo de confianza que ninguna campaña puede comprar.",
+    quiz: { question: "¿Cuál de estas es la forma más creíble de comunicar sostenibilidad?", options: ["Usar imágenes de naturaleza y colores verdes en toda la comunicación", "Destacar el atributo ambiental más positivo del producto", "Mostrar el punto de partida, el progreso real y los desafíos con datos específicos", "Obtener una certificación genérica de empresa responsable"], correct: 2, explanation: "La narrativa de progreso honesto — con datos específicos, reconocimiento de limitaciones y continuidad en el tiempo — genera credibilidad que ninguna afirmación de perfección puede lograr." },
+    resources: [
+      { type: "article", title: "The Greenwashing Hydra", author: "InfluenceMap", description: "Análisis riguroso de las diferentes formas de greenwashing y cómo detectarlas. Referencia usada por periodistas y reguladores.", url: "https://influencemap.org/report/The-Greenwashing-Hydra-19219" },
+      { type: "tool", title: "Science Based Targets Initiative (SBTi)", description: "El estándar de referencia para compromisos climáticos corporativos creíbles. Útil para entender qué constituye un compromiso real.", url: "https://sciencebasedtargets.org" },
+      { type: "book", title: "Cradle to Cradle: Remaking the Way We Make Things", author: "William McDonough y Michael Braungart", description: "El libro fundacional del diseño circular. Cambia la forma de pensar sobre producción y consumo.", url: "https://www.amazon.com/Cradle-Remaking-Way-Make-Things/dp/0865475873" },
+    ],
+  },
+
+{
+    id: "m29", slug: "gestion-de-la-reputacion", title: "Gestión de reputación en la era digital",
+    description: "Cómo construir, proteger y recuperar la reputación de una marca en un entorno donde cualquier persona puede amplificar cualquier mensaje en minutos.",
+    month: "Mes 15", level_required: 4, xp_reward: 380, lessons: 4, status: "available", theme: "Estrategia avanzada",
+    opening: "La reputación de una marca se construye en años y puede destruirse en horas. En un entorno digital donde un tweet puede generar cobertura global antes de que el equipo de comunicaciones se despierte, la gestión de reputación pasó de ser una función de relaciones públicas a ser una capacidad estratégica central de cualquier organización.",
+    sections: [
+      { heading: "Cómo se forma la reputación: la brecha entre identidad e imagen", body: "La identidad es lo que una organización dice ser. La imagen es lo que otros perciben que es. La reputación es la percepción acumulada a lo largo del tiempo, basada en experiencias directas e indirectas, en lo que se dice y en lo que se hace. La brecha entre identidad e imagen es donde viven las crisis de reputación.", extended_body: "El modelo de reputación de Charles Fombrun identifica seis dimensiones: atractivo emocional, productos y servicios, visión y liderazgo, entorno de trabajo, desempeño financiero, y responsabilidad social. Una marca puede tener reputación excelente en algunas dimensiones y débil en otras. La gestión de reputación efectiva identifica cuáles dimensiones son más relevantes para los stakeholders prioritarios y trabaja en ellas de manera consistente.", example: { label: "Ejemplo real", content: "Una empresa de tecnología en Latinoamérica tenía excelente reputación de producto — sus usuarios estaban muy satisfechos con el servicio. Pero un incidente de filtración de datos reveló prácticas de seguridad deficientes. La brecha entre la imagen de empresa confiable y la realidad de sus prácticas internas generó una crisis que tardó dos años en resolverse porque no había infraestructura de respuesta construida previamente." } },
+      { heading: "Monitoreo de reputación: escuchar antes de que sea tarde", body: "La gestión proactiva de reputación empieza por escuchar sistemáticamente lo que se dice de una marca antes de que se convierta en crisis. El monitoreo de menciones, sentimiento y temas emergentes en medios digitales y redes sociales es la base de cualquier estrategia de reputación moderna.", extended_body: "Tres niveles de monitoreo que toda agencia debería ofrecer a sus clientes. El monitoreo de alertas básico detecta menciones del nombre de la marca en tiempo real. El análisis de sentimiento categoriza esas menciones como positivas, negativas o neutras. El análisis de narrativa identifica los temas y frames que rodean a la marca — no solo qué se dice sino cómo se encuadra, quiénes lo dicen y a qué audiencias llega." },
+      { heading: "Gestión de crisis: los primeros 24 horas son determinantes", body: "Las organizaciones que gestionan bien las crisis de reputación comparten una característica: tienen un protocolo preparado antes de que ocurra la crisis. Las que no, improvisan — y en reputación, la improvisación casi siempre amplifica el daño.", extended_body: "El protocolo de crisis de reputación tiene cinco momentos. Primero, verificación: confirmar que el incidente es real antes de responder públicamente. Segundo, evaluación: determinar la escala real y el potencial de escalada. Tercero, decisión de respuesta: qué decir, quién lo dice, por qué canal y cuándo. Cuarto, ejecución: respuesta coordinada y consistente en todos los canales. Quinto, monitoreo post-crisis: seguimiento del impacto de la respuesta y ajuste si es necesario." },
+      { heading: "Construir reputación proactivamente: el capital de confianza", body: "La mejor gestión de crisis es la que se hace antes de la crisis — construyendo capital de confianza que actúa como amortiguador cuando ocurre un incidente negativo. Las marcas con alta reputación acumulada sobreviven mejor las crisis que las que llegaron al incidente con poca confianza en reserva.", extended_body: "El capital de confianza se construye con tres activos: consistencia entre lo que se dice y lo que se hace (los incumplimientos son destructores de reputación más rápidos que cualquier crisis), transparencia en los momentos difíciles (las empresas que comunican malas noticias proactivamente son percibidas como más confiables que las que las ocultan), y contribución genuina al entorno donde operan (comunidad, industria, sociedad)." },
+    ],
+    exercise: "Elegí una marca que hayas gestionado o con la que trabajes. Hacé un mapeo de reputación básico: ¿cuáles son sus tres mayores activos de reputación? ¿Cuáles son sus tres mayores vulnerabilidades? ¿Tiene un protocolo de crisis documentado? ¿Qué recomendarías como próximos pasos para fortalecer su capital de confianza?",
+    takeaway: "La reputación no se gestiona en las crisis — se gestiona todos los días. Las crisis solo revelan si el trabajo diario fue bien hecho.",
+    quiz: { question: "¿Qué es el capital de confianza en gestión de reputación?", options: ["El presupuesto reservado para comunicación de crisis", "La reputación acumulada que actúa como amortiguador cuando ocurre un incidente negativo", "Las relaciones con periodistas y medios de comunicación", "El historial de premios y reconocimientos de la marca"], correct: 1, explanation: "El capital de confianza es la reputación acumulada a través de consistencia, transparencia y contribución genuina. Las marcas con alto capital de confianza sobreviven mejor las crisis porque los stakeholders les dan el beneficio de la duda." },
+    resources: [
+      { type: "book", title: "Reputation: Realizing Value from the Corporate Image", author: "Charles Fombrun", description: "El marco teórico más sólido para entender cómo se forma y gestiona la reputación corporativa.", url: "https://www.amazon.com/Reputation-Realizing-Value-Corporate-Image/dp/0875846335" },
+      { type: "book", title: "Spin Sucks: Communication and Reputation Management in the Digital Age", author: "Gini Dietrich", description: "Perspectiva práctica y moderna sobre comunicación corporativa sin manipulación. Muy aplicable al trabajo de agencias.", url: "https://www.amazon.com/Spin-Sucks-Communication-Reputation-Management/dp/0789751003" },
+      { type: "tool", title: "Brandwatch", description: "Una de las herramientas más completas para monitoreo de reputación y análisis de sentimiento en medios digitales.", url: "https://www.brandwatch.com" },
+    ],
+  },
+
+{
+    id: "m30", slug: "estrategia-de-contenidos", title: "Estrategia de contenidos que genera valor real",
+    description: "Cómo construir una estrategia de contenidos orientada a objetivos de negocio concretos, en lugar de producir por producir.",
+    month: "Mes 15", level_required: 4, xp_reward: 380, lessons: 4, status: "available", theme: "Estrategia avanzada",
+    opening: "La mayoría de las estrategias de contenidos fracasan porque empiezan desde el contenido en lugar de empezar desde el negocio. Se definen formatos, frecuencias y canales antes de responder la pregunta más importante: ¿qué necesita lograr este contenido para la organización?",
+    sections: [
+      { heading: "El problema con el contenido por volumen", body: "Publicar mucho no es lo mismo que comunicar bien. El modelo de contenido por volumen — dos posts diarios, tres videos por semana, un newsletter cada martes — produce agotamiento de equipo y saturación de audiencia sin generar los resultados que justificarían la inversión.", extended_body: "La paradoja del contenido abundante es que disminuye la atención de la audiencia en lugar de aumentarla. Cuando una marca publica constantemente, sus seguidores aprenden a ignorarla — el contenido pierde urgencia y relevancia. Las marcas que publican con menor frecuencia pero con mayor selección y calidad suelen tener mejores métricas de engagement que las que siguen el modelo de volumen.", example: { label: "Ejemplo real", content: "Una empresa B2B publicaba 15 posts semanales entre LinkedIn, Twitter y su blog. El engagement promedio era bajo y el equipo estaba agotado. Redujeron a 4 posts semanales muy bien producidos, cada uno respondiendo una pregunta específica de su audiencia objetivo. En tres meses, el engagement aumentó un 340% y el tráfico calificado al sitio creció un 80%." } },
+      { heading: "Estrategia de contenidos orientada a objetivos: el modelo Jobs to Be Done", body: "El framework Jobs to Be Done, aplicado a contenidos, pregunta: ¿para qué 'contrata' un usuario este contenido? ¿Qué trabajo le hace hacer? Puede ser informarse, entretenerse, convencerse, conectar con otros, tomar una decisión. Cada contenido debería tener un job to be done claro.", extended_body: "Los cinco jobs to be done más comunes en estrategia de contenidos B2B: educar (enseñar algo que el cliente no sabía), validar (confirmar que una decisión que ya tomó o está por tomar es correcta), conectar (generar sensación de comunidad con otros similares), convertir (llevar a una acción específica), y retener (fortalecer la relación con clientes existentes). Una estrategia efectiva tiene contenido deliberadamente diseñado para cada job." },
+      { heading: "Cómo medir lo que importa en contenidos", body: "Las métricas de contenidos más comunes — vistas, alcance, impresiones — miden atención pero no valor. Las métricas que realmente importan son las que conectan el contenido con objetivos de negocio: leads generados, cuentas influenciadas, decisiones de compra aceleradas.", extended_body: "El modelo de atribución de contenidos es complejo porque el impacto rara vez es directo — un artículo leído hoy puede influir en una decisión de compra seis meses después. Por eso es importante medir tanto métricas de proceso (¿el contenido llega a la audiencia correcta?) como métricas de resultado (¿cambia comportamientos y genera valor?)." },
+      { heading: "Construir una máquina de contenidos eficiente", body: "La producción de contenidos a escala requiere sistemas que no dependan del heroísmo individual — editorial calendars, flujos de aprobación claros, repositorios de assets reutilizables, y procesos de reutilización y adaptación de contenido existente.", extended_body: "El modelo de contenido ancla y derivados es uno de los más eficientes: se produce un contenido largo y profundo (un estudio, un webinar, un artículo extenso) y a partir de él se generan múltiples derivados para diferentes formatos y canales. Una investigación de 30 páginas puede generar 10 posts de LinkedIn, 5 emails, 3 podcasts y 2 infografías — con una fracción del esfuerzo que requeriría producirlos independientemente." },
+    ],
+    exercise: "Elegí una marca y auditá su estrategia de contenidos actual. Para cada tipo de contenido que publica, identificá: ¿cuál es el job to be done? ¿Está bien ejecutado para ese job? ¿Conecta con algún objetivo de negocio medible? Proponé tres cambios concretos para mejorar la estrategia.",
+    takeaway: "El mejor contenido no es el más creativo — es el que hace exactamente el trabajo que necesita hacer para la persona correcta en el momento correcto.",
+    quiz: { question: "¿Qué pregunta define el framework Jobs to Be Done aplicado a contenidos?", options: ["¿Qué formato genera más engagement?", "¿Con qué frecuencia debemos publicar?", "¿Para qué contrata un usuario este contenido y qué trabajo le hace hacer?", "¿Qué hace la competencia en términos de contenido?"], correct: 2, explanation: "El framework Jobs to Be Done pregunta cuál es el trabajo que el contenido hace para el usuario — informar, validar, conectar, convertir o retener. Esa claridad de propósito es lo que diferencia contenido estratégico de contenido por volumen." },
+    resources: [
+      { type: "book", title: "Content Strategy for the Web", author: "Kristina Halvorson y Melissa Rach", description: "El libro de referencia para estructurar una estrategia de contenidos profesional. Práctico y con frameworks aplicables.", url: "https://www.amazon.com/Content-Strategy-Web-Kristina-Halvorson/dp/0321808304" },
+      { type: "book", title: "They Ask You Answer", author: "Marcus Sheridan", description: "Cómo una empresa de piscinas se convirtió en el mayor referente de contenidos B2B respondiendo las preguntas reales de sus clientes. Inspirador y muy aplicable.", url: "https://www.amazon.com/They-Ask-You-Answer-Revolutionary/dp/1119611008" },
+      { type: "tool", title: "Semrush", description: "Herramienta de referencia para investigación de palabras clave, análisis de competencia de contenidos y auditorías de SEO.", url: "https://www.semrush.com" },
+    ],
+  },
+
+{
+    id: "m31", slug: "pensamiento-sistemico", title: "Pensamiento sistémico: ver el todo antes de mover una parte",
+    description: "Cómo entender las relaciones entre las partes de un sistema para anticipar consecuencias no deseadas y diseñar intervenciones más efectivas.",
+    month: "Mes 16", level_required: 4, xp_reward: 400, lessons: 4, status: "available", theme: "Pensamiento avanzado",
+    opening: "La mayoría de los problemas complejos que enfrentan las organizaciones no se resuelven con soluciones lineales. Cuando se ataca un síntoma sin entender el sistema que lo produce, el problema reaparece — a veces peor. El pensamiento sistémico es la habilidad de ver patrones de interacción antes de actuar.",
+    sections: [
+      { heading: "La diferencia entre pensamiento lineal y pensamiento sistémico", body: "El pensamiento lineal ve el mundo como una cadena de causa y efecto: A causa B, B causa C. El pensamiento sistémico ve el mundo como una red de bucles de retroalimentación: A causa B, B causa C, y C retroalimenta sobre A. Esa diferencia cambia completamente cómo se diagnostica un problema y cómo se diseña una solución.", extended_body: "El archienemigo del pensamiento lineal en organizaciones es la solución que resuelve el síntoma pero no la causa, y que en el proceso genera nuevos problemas. En agencias: aumentar la plantilla para resolver la sobrecarga de trabajo sin cambiar el proceso de generación de proyectos no resuelve el problema — solo lo posterga hasta que la plantilla nueva también esté sobrecargada.", example: { label: "Ejemplo real", content: "Una agencia tenía problemas crónicos de plazo: los proyectos siempre llegaban tarde. La solución lineal fue agregar jefes de proyecto. Los plazos mejoraron temporalmente pero luego empeoraron — los jefes de proyecto estaban agregando reuniones de seguimiento que consumían el tiempo de producción. El problema real era que los briefs llegaban tarde y sin información completa, lo que generaba retrabajo. La solución sistémica fue rediseñar el proceso de brief, no agregar supervisión." } },
+      { heading: "Bucles de retroalimentación: cómo los sistemas se auto-refuerzan o se auto-regulan", body: "Hay dos tipos de bucles de retroalimentación. Los bucles de refuerzo amplifican un efecto en la misma dirección — pueden generar crecimiento acelerado pero también colapso acelerado. Los bucles de equilibrio empujan el sistema hacia un estado estable — explican por qué los cambios organizacionales son tan difíciles de sostener.", extended_body: "Un ejemplo de bucle de refuerzo en una agencia: la reputación positiva genera más clientes, más clientes generan más ingresos, más ingresos permiten contratar mejor talento, mejor talento genera más reputación. Este ciclo virtuoso también puede invertirse: la reputación negativa genera menos clientes, menos clientes generan menos ingresos, menos ingresos implican recortes de talento, menos talento genera más problemas de calidad." },
+      { heading: "Puntos de apalancamiento: dónde intervenir para cambiar un sistema", body: "No todos los lugares de un sistema son igual de sensibles a la intervención. Donella Meadows identificó una jerarquía de puntos de apalancamiento — desde los menos efectivos (cambiar números o parámetros) hasta los más poderosos (cambiar los objetivos del sistema o la mentalidad que lo generó).", extended_body: "En el contexto de agencias, los cambios de bajo apalancamiento son los más comunes: cambiar los plazos, ajustar los presupuestos, agregar reuniones de seguimiento. Los cambios de alto apalancamiento son más raros pero más poderosos: cambiar la manera en que el equipo entiende el éxito, cambiar qué tipo de trabajo acepta la agencia, cambiar la relación fundamental con los clientes." },
+      { heading: "Herramientas de pensamiento sistémico aplicadas a proyectos", body: "Tres herramientas concretas de pensamiento sistémico que se pueden usar en proyectos de agencia sin necesitar formación especializada: los mapas causales (diagramar las relaciones entre factores relevantes), los escenarios de segundo orden (preguntar '¿y luego qué?' dos o tres veces), y los pre-mortems (imaginar que el proyecto fracasó y trabajar hacia atrás para identificar por qué).", extended_body: "El pre-mortem, popularizado por el psicólogo Gary Klein, es especialmente valioso en agencias. Antes de ejecutar un proyecto, el equipo imagina que ya terminó y fue un fracaso total. Cada persona escribe en silencio las razones del fracaso. Luego se comparten. Este ejercicio revela supuestos no examinados, riesgos subestimados y puntos de falla que el pensamiento positivo habitual bloquea." },
+    ],
+    exercise: "Tomá un problema recurrente en tu agencia o equipo — algo que se intenta resolver repetidamente sin éxito duradero. Dibujá un mapa causal básico: identificá los factores que contribuyen al problema y las relaciones entre ellos. ¿Hay bucles de retroalimentación? ¿Cuál sería el punto de apalancamiento más efectivo para intervenir?",
+    takeaway: "Cada solución que no considera el sistema produce el próximo problema.",
+    quiz: { question: "¿Qué son los bucles de equilibrio en pensamiento sistémico?", options: ["Bucles que amplifican un efecto en la misma dirección generando crecimiento o colapso", "Bucles que empujan el sistema hacia un estado estable, explicando la resistencia al cambio", "Bucles que conectan diferentes partes de la organización entre sí", "Bucles que miden el equilibrio financiero del sistema"], correct: 1, explanation: "Los bucles de equilibrio son mecanismos que empujan el sistema hacia un estado estable. Explican por qué los cambios organizacionales son tan difíciles de sostener: el sistema tiene fuerzas que lo devuelven al estado anterior." },
+    resources: [
+      { type: "book", title: "Thinking in Systems: A Primer", author: "Donella Meadows", description: "El libro más accesible y completo sobre pensamiento sistémico. Donella Meadows combina rigor conceptual con ejemplos concretos y prosa clara.", url: "https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557" },
+      { type: "book", title: "The Fifth Discipline", author: "Peter Senge", description: "El clásico sobre organizaciones que aprenden, con el pensamiento sistémico como disciplina central. Más denso que Meadows pero muy influyente.", url: "https://www.amazon.com/Fifth-Discipline-Practice-Learning-Organization/dp/0385517254" },
+      { type: "tool", title: "Kumu", description: "Herramienta online para construir mapas causales y diagramas de sistemas. Gratuita para proyectos básicos.", url: "https://kumu.io" },
+    ],
+  },
+
+{
+    id: "m32", slug: "negociacion-para-creativos", title: "Negociación para creativos: defender el valor sin perder la relación",
+    description: "Principios y técnicas de negociación aplicados al contexto de agencias: presupuestos, alcances, plazos y condiciones de trabajo.",
+    month: "Mes 16", level_required: 4, xp_reward: 400, lessons: 4, status: "available", theme: "Pensamiento avanzado",
+    opening: "La mayoría de los creativos y estrategas en agencias son buenos en su trabajo pero evitan la negociación — la perciben como conflicto, como algo que 'no va con su perfil'. El resultado es que aceptan condiciones que no son sostenibles, trabajan con presupuestos que no alcanza y terminan resintiendo a clientes que en realidad están dispuestos a pagar más si alguien se los pide bien.",
+    sections: [
+      { heading: "Negociación no es conflicto: el error de percepción que cuesta caro", body: "La negociación es un proceso de intercambio de información orientado a encontrar acuerdos que funcionen para ambas partes. En una negociación bien manejada, ambas partes terminan mejor que si no hubieran negociado. El conflicto ocurre cuando la negociación falla — no cuando ocurre.", extended_body: "El modelo de negociación basada en principios, desarrollado en Harvard por Roger Fisher y William Ury, distingue entre posiciones (lo que cada parte dice querer) e intereses (lo que realmente necesita). La mayoría de las negociaciones se estancan en posiciones. Las que llegan a buenos acuerdos exploran los intereses detrás de esas posiciones — y frecuentemente descubren que los intereses son compatibles aunque las posiciones parezcan opuestas.", example: { label: "Ejemplo real", content: "Una agencia y un cliente estaban estancados en el presupuesto de una propuesta: el cliente decía que tenía $50.000 disponibles y la agencia decía que el proyecto valía $80.000. Explorando intereses, la agencia descubrió que el cliente tenía restricciones de caja en el trimestre actual pero no en el siguiente. La solución fue dividir el proyecto en dos fases con pago diferido. Ambas partes obtuvieron lo que necesitaban sin que nadie cediera su posición original." } },
+      { heading: "BATNA: tu alternativa define tu poder de negociación", body: "BATNA (Best Alternative to a Negotiated Agreement) es lo que harías si la negociación no llegara a ningún acuerdo. Tu BATNA define tu poder de negociación real — no tu posición declarada, no cuánto querés el acuerdo, sino qué tan bien podés vivir sin él.", extended_body: "Mejorar tu BATNA antes de negociar es la forma más efectiva de mejorar tu posición. Para una agencia, eso significa: tener otros clientes en proceso, tener proyectos propios que generen ingresos independientes, tener una reputación que haga que los clientes lleguen sin que tengas que buscarlos. La dependencia de un solo cliente o de un solo tipo de proyecto debilita estructuralmente la posición negociadora." },
+      { heading: "Cómo defender el valor de tu trabajo sin sonar defensivo", body: "Cuando un cliente cuestiona el precio, la respuesta menos efectiva es justificarse — 'es que tenemos muchos gastos', 'es que el mercado cobra así'. La más efectiva es reencuadrar la conversación desde el valor que el trabajo genera, no desde el costo que tiene.", extended_body: "Tres técnicas para defender valor. Primera, el anclaje: nombrar primero el valor que el trabajo genera antes de nombrar el precio ('esta campaña puede generar X en ventas adicionales — nuestra propuesta es de Y'). Segunda, el contraste: comparar el costo con el costo de no hacerlo ('si este problema sigue sin resolverse, el costo para tu negocio es de Z por mes'). Tercera, la desagregación: en lugar de defender el número total, explicar qué incluye y el valor de cada componente." },
+      { heading: "Negociar condiciones de trabajo, no solo precios", body: "Las negociaciones más importantes en una agencia no siempre son sobre dinero. Las condiciones de trabajo — plazos, cantidad de rondas de revisión, canales de comunicación, procesos de aprobación — determinan si un proyecto va a ser rentable y sostenible para el equipo.", extended_body: "Las condiciones que vale más la pena negociar al inicio de cualquier proyecto: quiénes son los decisores finales (los proyectos con múltiples aprobadores sin jerarquía clara siempre se descarrilan), cuántas rondas de revisión están incluidas (sin un límite, el retrabajo puede consumir toda la rentabilidad), y qué pasa si el brief cambia significativamente después de empezar (sin una cláusula de re-briefing, los cambios de dirección son pérdidas directas de margen)." },
+    ],
+    exercise: "Pensá en la última negociación de presupuesto o alcance que tuviste con un cliente. Analizala usando los frameworks del módulo: ¿cuáles eran tus intereses reales vs. tu posición declarada? ¿Cuál era tu BATNA? ¿Usaste alguna técnica de defensa de valor? ¿Qué harías diferente hoy?",
+    takeaway: "No podés cobrar lo que valés si no podés defender lo que valés. La negociación es una habilidad, no un rasgo de personalidad.",
+    quiz: { question: "¿Qué es el BATNA en una negociación?", options: ["El precio mínimo que estás dispuesto a aceptar", "La mejor alternativa disponible si la negociación no llega a un acuerdo", "La estrategia de apertura de una negociación", "El balance entre lo que pedís y lo que el cliente puede pagar"], correct: 1, explanation: "BATNA es lo que harías si la negociación no llegara a ningún acuerdo. Definir y mejorar tu BATNA antes de negociar es la forma más efectiva de aumentar tu poder de negociación real." },
+    resources: [
+      { type: "book", title: "Getting to Yes: Negotiating Agreement Without Giving In", author: "Roger Fisher y William Ury", description: "El libro de negociación más leído del mundo. El modelo de negociación basada en principios explicado con claridad y muchos ejemplos.", url: "https://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without/dp/0143118757" },
+      { type: "book", title: "Never Split the Difference", author: "Chris Voss", description: "Ex-negociador de rehenes del FBI explica cómo aplicar técnicas de negociación de alto riesgo en contextos cotidianos. Muy entretenido y sorprendentemente aplicable.", url: "https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/0062407805" },
+      { type: "book", title: "Humble Inquiry: The Gentle Art of Asking Instead of Telling", author: "Edgar Schein", description: "No es estrictamente sobre negociación, pero las preguntas que propone Schein son las mejores herramientas para explorar intereses en cualquier conversación difícil.", url: "https://www.amazon.com/Humble-Inquiry-Gentle-Instead-Telling/dp/1609949811" },
+    ],
+  },
+
+{
+    id: "m33", slug: "innovacion-en-experiencia-de-cliente", title: "Innovación en experiencia de cliente: más allá del journey map",
+    description: "Cómo diseñar experiencias que generen lealtad real, no solo satisfacción momentánea, y cómo medir el impacto de la experiencia en resultados de negocio.",
+    month: "Mes 17", level_required: 4, xp_reward: 420, lessons: 4, status: "available", theme: "Experiencia",
+    opening: "La satisfacción del cliente es el piso, no el techo. En mercados donde los productos y servicios se comoditizan, la experiencia es el principal diferenciador — y la mayoría de las empresas lo entienden intelectualmente pero siguen diseñando experiencias mediocres porque no saben cómo hacerlo de manera sistemática.",
+    sections: [
+      { heading: "La diferencia entre satisfacción y lealtad", body: "Un cliente satisfecho es el que recibió lo que esperaba. Un cliente leal es el que vuelve aunque tenga alternativas disponibles y recomienda activamente. La investigación de Fred Reichheld muestra que el 80% de los clientes que abandonan una marca reportaron haber estado 'satisfechos' antes de irse. La satisfacción no predice lealtad — la experiencia memorable sí.", extended_body: "Las experiencias que generan lealtad tienen tres características. Primera, resuelven el problema con mínimo esfuerzo para el cliente — el esfuerzo del cliente (CES, Customer Effort Score) es mejor predictor de lealtad que la satisfacción. Segunda, generan al menos un momento de sorpresa positiva que supera las expectativas en un punto específico del journey. Tercera, recuperan bien cuando algo sale mal — la resolución efectiva de un problema puede generar más lealtad que si el problema nunca hubiera ocurrido.", example: { label: "Ejemplo real", content: "Una empresa de telecomunicaciones tenía scores de satisfacción del 78% pero churn (abandono) del 22% anual. Al analizar el journey, descubrieron que la satisfacción se medía inmediatamente después de las interacciones de servicio — que eran buenas — pero ignoraba los momentos de fricción del uso cotidiano del producto: facturas confusas, procesos de cambio de plan difíciles, demoras en activaciones. Rediseñaron esos momentos de fricción y el churn bajó al 14% en dos años." } },
+      { heading: "El journey map como punto de partida, no como destino", body: "El customer journey map es una herramienta valiosa para visualizar la experiencia del cliente, pero muchas organizaciones lo usan como un ejercicio de documentación en lugar de como un punto de partida para la innovación.", extended_body: "Un journey map efectivo no solo documenta lo que pasa — identifica los momentos de mayor impacto emocional (los 'peaks' y 'valleys' de la experiencia), los puntos de mayor fricción, y las oportunidades de sorpresa positiva. La investigación de Kahneman sobre memoria de experiencias sugiere que las personas recuerdan y evalúan una experiencia principalmente por su punto más intenso (positivo o negativo) y por cómo termina — no por el promedio. Eso tiene implicaciones directas para dónde invertir en mejorar la experiencia." },
+      { heading: "Métricas de experiencia que conectan con negocio", body: "NPS (Net Promoter Score), CES (Customer Effort Score) y CSAT (Customer Satisfaction Score) son las tres métricas de experiencia más usadas. Cada una mide algo diferente y es más útil en diferentes contextos.", extended_body: "El NPS pregunta cuánto recomendarías esta marca (escala 0-10). Es buen predictor de crecimiento orgánico. El CES pregunta cuánto esfuerzo requirió resolver tu problema (escala 1-7). Es buen predictor de churn. El CSAT pregunta qué tan satisfecho estuviste con esta interacción. Es útil para medir touchpoints específicos pero malo como métrica de lealtad general. La combinación de las tres da una imagen más completa que cualquiera sola." },
+      { heading: "Diseño de servicio: cuando la experiencia es el producto", body: "El diseño de servicio es la disciplina que aplica principios de diseño a la creación y mejora de servicios — incluyendo los procesos, las personas y los sistemas que los hacen posibles. En una agencia, entender diseño de servicio permite crear valor más allá de la comunicación.", extended_body: "Las herramientas principales del diseño de servicio son el blueprint de servicio (que muestra tanto lo visible para el cliente como los procesos internos que lo soportan), los proto-servicios (versiones mínimas para testear antes de escalar), y el role-playing (simular la experiencia de servicio con el equipo antes de implementar). Estas herramientas permiten diseñar la experiencia de la misma manera que se diseña una campaña: con intención, iteración y testeo." },
+    ],
+    exercise: "Mapeá el journey completo de un cliente de una marca con la que trabajés. Identificá los tres momentos de mayor impacto emocional (positivos o negativos) y los tres puntos de mayor fricción. Diseñá una intervención específica para mejorar el momento de mayor impacto negativo y una para crear un momento de sorpresa positiva donde hoy no existe ninguno.",
+    takeaway: "La experiencia no es lo que hacés — es lo que el cliente recuerda que hiciste. Diseñar para la memoria es diferente a diseñar para la satisfacción.",
+    quiz: { question: "¿Qué métrica de experiencia es mejor predictor de churn (abandono)?", options: ["NPS (Net Promoter Score)", "CSAT (Customer Satisfaction Score)", "CES (Customer Effort Score)", "CLV (Customer Lifetime Value)"], correct: 2, explanation: "El CES (Customer Effort Score) mide cuánto esfuerzo requirió al cliente resolver su problema o lograr su objetivo. La investigación muestra que es el mejor predictor de abandono — los clientes que tienen que hacer mucho esfuerzo son los que más probabilidades tienen de irse." },
+    resources: [
+      { type: "book", title: "The Ultimate Question 2.0", author: "Fred Reichheld y Rob Markey", description: "El libro que popularizó el NPS y la filosofía de orientación al cliente promotor. Sólido en la parte conceptual y en casos de empresas que transformaron su negocio.", url: "https://www.amazon.com/Ultimate-Question-2-0-Revised-Expanded/dp/1422173356" },
+      { type: "book", title: "This Is Service Design Doing", author: "Marc Stickdorn et al.", description: "El manual más completo de diseño de servicio. Combina teoría con herramientas prácticas y casos reales.", url: "https://www.amazon.com/This-Service-Design-Doing-Applying/dp/1491927186" },
+      { type: "tool", title: "Miro", description: "La herramienta más usada para journey mapping colaborativo y blueprints de servicio. Tiene templates listos para usar.", url: "https://miro.com" },
+    ],
+  },
+
+{
+    id: "m34", slug: "pitching-y-nuevos-negocios", title: "Pitching y nuevos negocios: ganar cuentas con más criterio y menos azar",
+    description: "Cómo estructurar el proceso de nuevos negocios de una agencia para que sea sistemático, eficiente y con mayor tasa de conversión.",
+    month: "Mes 17", level_required: 4, xp_reward: 420, lessons: 4, status: "available", theme: "Experiencia",
+    opening: "La mayoría de las agencias tratan el pitch como un evento excepcional que requiere heroísmo de todo el equipo. Las mejores agencias lo tratan como un proceso con etapas bien definidas, criterios de calificación claros y una máquina de aprendizaje que mejora con cada resultado.",
+    sections: [
+      { heading: "Calificar antes de participar: el filtro que más ahorra", body: "El tiempo invertido en un pitch que no se debería haber aceptado es tiempo que no se puede invertir en clientes existentes ni en pitches con mayor probabilidad de éxito. La calificación rigurosa de oportunidades antes de comprometerse es la primera palanca para mejorar la rentabilidad del proceso de nuevos negocios.", extended_body: "Los criterios de calificación más importantes para una agencia: fit estratégico (¿es un cliente para el que podemos hacer trabajo que nos enorgullezca?), probabilidad real de ganar (¿hay una razón genuina para creer que esta cuenta puede ser nuestra?), costo del pitch (¿qué sacrificamos para participar?), y valor potencial (¿vale la inversión si ganamos?). Una agencia que responde estas cuatro preguntas honestamente antes de cada pitch reduce su participación en pitches pero aumenta significativamente su tasa de conversión.", example: { label: "Ejemplo real", content: "Una agencia mediana participaba en promedio de 12 pitches anuales y ganaba 2. Al implementar un proceso de calificación riguroso, bajó a 6 pitches anuales y ganó 3. Con la mitad de los pitches ganó más cuentas — y el tiempo liberado de los pitches descartados se invirtió en propuestas no solicitadas para cuentas target que resultaron en 2 cuentas adicionales sin pitch competitivo." } },
+      { heading: "La estructura del pitch ganador", body: "Los pitches que ganan no son los más creativos — son los más relevantes. La diferencia está en cuánto de la presentación habla del cliente y cuánto habla de la agencia. Los pitches que pierden suelen hablar principalmente de la agencia; los que ganan hablan principalmente del cliente.", extended_body: "La estructura de un pitch ganador: primero mostrar que entendiste el negocio del cliente mejor que ellos mismos (insight de negocio), luego mostrar que entendiste el problema real que están tratando de resolver (redefinición del problema), luego presentar la propuesta como respuesta específica a ese problema (solución contextualizada), luego mostrar por qué tu agencia es la más capaz para ejecutarla (credenciales relevantes), y finalmente presentar el siguiente paso concreto (cierre accionable)." },
+      { heading: "Construir relación antes del pitch: la ventaja del conocimiento", body: "Las cuentas más valiosas raramente se ganan en un pitch competitivo abierto — se construyen a lo largo del tiempo con relaciones que generan confianza antes de que haya una licitación formal. Las agencias que invierten en construir relaciones con prospectos antes de que exista una oportunidad formal tienen una ventaja enorme cuando esa oportunidad aparece.", extended_body: "La estrategia de relación pre-pitch tiene tres momentos: el contenido (producir análisis, perspectivas o investigaciones que el prospecto encuentre genuinamente valiosas), la conexión (buscar encuentros en el contexto donde el prospecto ya está — industria, eventos, comunidades), y la conversación (cuando la relación tiene suficiente confianza, explorar directamente si hay problemas que la agencia podría ayudar a resolver, sin esperar una licitación)." },
+      { heading: "Aprender de los pitches perdidos", body: "Cada pitch perdido contiene información valiosa para mejorar los siguientes. Las agencias que sistematizan el aprendizaje post-pitch mejoran significativamente su tasa de conversión a lo largo del tiempo.", extended_body: "El debrief post-pitch debería responder cuatro preguntas: ¿perdimos en la propuesta estratégica, en la ejecución creativa, en la presentación o en la relación? ¿Qué dijo el cliente que valoró de los que ganaron y qué echó de menos en nuestra propuesta? ¿Qué suposición nuestra sobre el cliente resultó incorrecta? ¿Había señales durante el proceso que indicaban el resultado antes de la decisión final? El patrón que emerge de responder estas preguntas en cada pitch perdido es el insumo más valioso para mejorar el proceso." },
+    ],
+    exercise: "Analizá el último pitch que participó tu agencia (ya sea ganado o perdido). Usando el framework de la estructura del pitch ganador, evaluá qué porcentaje de la presentación hablaba del cliente y qué porcentaje de la agencia. Identificá el momento más débil de la presentación y proponé cómo lo mejorarías.",
+    takeaway: "Ganar un pitch no empieza el día de la presentación — empieza el día en que decidís si vale la pena participar.",
+    quiz: { question: "¿Qué característica comparten los pitches que ganan consistentemente?", options: ["Son los más creativos y originales de la licitación", "Hablan principalmente del cliente, no de la agencia", "Tienen la producción visual más alta de los participantes", "Presentan el mayor número de ideas y conceptos"], correct: 1, explanation: "Los pitches ganadores hablan principalmente del cliente — su negocio, su problema real, su contexto. La agencia aparece como la solución específica para ese contexto, no como protagonista." },
+    resources: [
+      { type: "book", title: "The Win Without Pitching Manifesto", author: "Blair Enns", description: "El libro más provocador sobre el modelo de nuevos negocios para agencias. Enns argumenta que las agencias que ceden el poder en el proceso de ventas están estructuralmente condenadas a márgenes bajos.", url: "https://www.amazon.com/Win-Without-Pitching-Manifesto/dp/1605440043" },
+      { type: "book", title: "Storyselling for Financial Advisors", author: "Scott West y Mitch Anthony", description: "Aunque está escrito para asesores financieros, el modelo de usar narrativas para vender servicios profesionales es directamente aplicable a agencias.", url: "https://www.amazon.com/Storyselling-Financial-Advisors-Advisors-Clients/dp/0793136695" },
+      { type: "podcast", title: "2Bobs — Conversations on the Art of Creative Entrepreneurship", author: "David C. Baker y Blair Enns", description: "El podcast más valioso sobre el negocio de las agencias creativas. Cada episodio toca un aspecto de cómo hacer sostenible una agencia.", url: "https://2bobs.com" },
+    ],
+  },
+
+{
+    id: "m35", slug: "cultura-organizacional-agencias", title: "Cultura organizacional: lo que pasa cuando nadie mira",
+    description: "Qué es realmente la cultura de una organización, cómo se forma, cómo se cambia y por qué es el factor más determinante del desempeño a largo plazo.",
+    month: "Mes 18", level_required: 4, xp_reward: 440, lessons: 4, status: "available", theme: "Organizaciones",
+    opening: "La cultura organizacional es lo que la gente hace cuando nadie los está mirando. No los valores enmarcados en la pared, no el discurso del CEO en el kick-off anual — sino los comportamientos reales que se modelan, se refuerzan y se replican en el trabajo cotidiano. Cambiar la cultura es el proyecto más difícil y más importante que puede emprender una organización.",
+    sections: [
+      { heading: "Cómo se forma realmente la cultura: el modelo de Schein", body: "Edgar Schein identificó tres niveles de cultura organizacional. El nivel más visible son los artefactos: los comportamientos observables, el diseño del espacio, los rituales. El nivel medio son los valores declarados: lo que la organización dice que valora. El nivel más profundo son los supuestos básicos: las creencias inconscientes que realmente guían el comportamiento cuando hay tensión entre valores.", extended_body: "El gap entre valores declarados y supuestos básicos es la fuente de la mayoría de los problemas de cultura. Una organización puede declarar que valora la innovación pero tener un supuesto básico de que los errores se castigan. En esa tensión, el supuesto básico siempre gana: las personas aprenden que es más seguro no innovar, independientemente de lo que diga el manual de valores. Cambiar la cultura requiere cambiar los supuestos básicos, no reescribir los valores.", example: { label: "Ejemplo real", content: "Una agencia tenía 'autonomía y confianza' como valor central pero en la práctica todos los presupuestos mayores a $500 requerían aprobación del director. El mensaje real era: 'no confiamos en vuestro criterio con dinero'. Cambiar ese proceso — dando autonomía real con rendición de cuentas clara — tuvo más impacto en la cultura que años de comunicación interna sobre los valores." } },
+      { heading: "Los líderes como modelos de cultura", body: "La cultura de una organización refleja el comportamiento de sus líderes con una fidelidad sorprendente. Lo que los líderes hacen — no lo que dicen — determina qué comportamientos son realmente valorados y cuáles son sancionados.", extended_body: "Los mecanismos a través de los cuales los líderes transmiten cultura son sutiles pero poderosos: a qué prestan atención y qué miden, cómo reaccionan a las crisis y a los errores, a quién promueven y a quién despiden, cómo asignan recursos, y qué comportamientos modelan en sus propias decisiones cotidianas. Un líder que declara valorar el trabajo en equipo pero que en la práctica toma todas las decisiones importantes unilateralmente transmite el mensaje real: la jerarquía importa más que la colaboración." },
+      { heading: "Cambiar la cultura: por qué es tan difícil y qué funciona", body: "Las intervenciones de cultura que no funcionan: los talleres de valores, las campañas de comunicación interna, los posters con palabras inspiradoras. Las que funcionan: cambiar las prácticas específicas que producen los comportamientos no deseados, promover a personas que modelan los comportamientos deseados, y actuar rápidamente ante violaciones visibles de los valores declarados.", extended_body: "El marco de cambio cultural más efectivo trabaja en tres frentes simultáneamente. Primero, cambiar los sistemas y procesos que refuerzan los comportamientos actuales — si el sistema de incentivos premia el trabajo individual y se quiere promover la colaboración, el cambio empieza en el sistema de incentivos, no en los discursos. Segundo, cambiar las historias que circulan en la organización — qué casos de éxito se celebran, qué errores se usan como aprendizaje público. Tercero, cambiar a las personas en roles de liderazgo cuando representan incompatibilidad irresoluble con la cultura que se quiere construir." },
+      { heading: "Cultura en agencias: los desafíos específicos del sector", body: "Las agencias tienen desafíos culturales específicos que no se encuentran en la misma forma en otras industrias: la tensión entre creatividad y proceso, la dependencia emocional del trabajo de aprobación externa, la cultura del 'pitch heroico' que agota equipos, y la dificultad de escalar sin perder la calidad.", extended_body: "La cultura de la urgencia crónica es uno de los problemas más comunes en agencias. Cuando todo es urgente, nada lo es — y el equipo aprende que la urgencia es el modo por defecto, no la excepción. Las agencias que logran salir de ese patrón lo hacen estableciendo explícitamente qué es urgente de verdad y protegiendo activamente el tiempo para el trabajo profundo que no puede hacerse bajo presión constante." },
+    ],
+    exercise: "Hacé un diagnóstico de cultura de tu agencia o equipo usando los tres niveles de Schein. Lista tres artefactos culturales observables, tres valores declarados, y —siendo muy honesto— dos o tres supuestos básicos que realmente guían el comportamiento cuando hay tensión. ¿Dónde están los gaps más grandes entre lo que se declara y lo que se hace?",
+    takeaway: "La cultura no se declara — se modela. Y se modela en las decisiones pequeñas de todos los días, no en los discursos anuales.",
+    quiz: { question: "¿Cuál es el nivel más profundo y más difícil de cambiar de la cultura organizacional según Schein?", options: ["Los artefactos observables como el diseño del espacio y los rituales", "Los valores declarados en los manuales y comunicaciones", "Los supuestos básicos inconscientes que guían el comportamiento real", "Los sistemas de incentivos y compensación"], correct: 2, explanation: "Los supuestos básicos son creencias inconscientes sobre cómo funciona el mundo que se formaron a lo largo del tiempo y que guían el comportamiento real — especialmente cuando hay tensión entre los valores declarados y la situación." },
+    resources: [
+      { type: "book", title: "Organizational Culture and Leadership", author: "Edgar Schein", description: "El libro fundacional sobre cultura organizacional. Denso pero imprescindible para entender el modelo de los tres niveles.", url: "https://www.amazon.com/Organizational-Culture-Leadership-Edgar-Schein/dp/1119212049" },
+      { type: "book", title: "No Rules Rules: Netflix and the Culture of Reinvention", author: "Reed Hastings y Erin Meyer", description: "Cómo Netflix construyó una de las culturas organizacionales más peculiares y efectivas del mundo. Muy concreto y lleno de ejemplos.", url: "https://www.amazon.com/No-Rules-Netflix-Culture-Reinvention/dp/1984877860" },
+      { type: "book", title: "The Culture Code", author: "Daniel Coyle", description: "Investiga qué tienen en común los grupos de mayor rendimiento del mundo — desde Navy SEALs hasta estudios de animación. Muy aplicable a equipos creativos.", url: "https://www.amazon.com/Culture-Code-Secrets-Highly-Successful/dp/0804176981" },
+    ],
+  },
+
+{
+    id: "m36", slug: "el-futuro-de-las-agencias", title: "El futuro de las agencias: escenarios y posicionamiento estratégico",
+    description: "Cómo están cambiando las agencias, qué modelos están emergiendo y cómo posicionarse estratégicamente para seguir siendo relevantes en los próximos cinco años.",
+    month: "Mes 18", level_required: 4, xp_reward: 440, lessons: 4, status: "available", theme: "Organizaciones",
+    opening: "La industria de las agencias está en un proceso de transformación estructural. Las fuerzas que la están cambiando — la IA, la in-housing de capacidades por parte de los clientes, la fragmentación de medios, la presión sobre márgenes — no son temporales. Son cambios estructurales que requieren respuestas estratégicas, no tácticas.",
+    sections: [
+      { heading: "Las fuerzas que están transformando la industria", body: "Cuatro fuerzas estructurales están cambiando el modelo de negocio de las agencias de manera simultánea. La automatización de la producción por IA reduce el valor de las agencias que compiten en velocidad y volumen. El in-housing — las empresas que internalizan capacidades creativas — reduce la demanda de servicios no diferenciados. La fragmentación de medios hace que la planificación y compra de medios sea más compleja pero también más automatizable. La presión sobre márgenes empuja a las agencias hacia modelos de trabajo más eficientes o más diferenciados.", extended_body: "La combinación de estas cuatro fuerzas crea un escenario de bifurcación: las agencias que no se diferencian claramente van a seguir perdiendo valor y márgenes hasta que no sean sostenibles. Las que encuentran y defienden una posición genuinamente diferenciada van a tener más valor que nunca — precisamente porque habrá menos de ellas.", example: { label: "Ejemplo real", content: "Una agencia de publicidad tradicional en Argentina perdió el 40% de su facturación en tres años cuando sus principales clientes internalizaron la producción digital y la gestión de redes sociales. En lugar de intentar recuperar ese negocio, pivotaron hacia consultoría de transformación de marca — un servicio que requería el tipo de expertise y perspectiva externa que los equipos internos no podían proveer. Hoy facturan más que antes con menos clientes y márgenes significativamente mayores." } },
+      { heading: "Los modelos emergentes: consultora, especialista, plataforma", body: "Tres modelos de agencia están ganando relevancia frente al modelo generalista tradicional. La consultora creativa opera upstream — antes del brief, en la definición del problema y la estrategia. La agencia especialista domina profundamente una disciplina, industria o tipo de trabajo específico. La agencia-plataforma combina talento propio con una red de especialistas independientes para escalar y desescalar según la demanda.", extended_body: "El modelo consultora requiere capacidad de diagnóstico, lenguaje de negocio y acceso a decisores senior — diferente al modelo de agencia ejecutora. El modelo especialista requiere construir y defender la posición de expertise durante años — no es un movimiento de corto plazo. El modelo plataforma requiere capacidad de curaduría de talento y gestión de calidad en redes distribuidas. Ninguno es mejor en abstracto — cada uno requiere decisiones de inversión y capacidades distintas." },
+      { heading: "Las capacidades que van a definir las agencias del futuro", body: "Más allá del modelo específico, hay capacidades que van a ser determinantes para cualquier tipo de agencia en los próximos años: la capacidad de integrar IA en los procesos de producción, la capacidad de medir y demostrar impacto de negocio, la capacidad de construir y vender productos propios además de servicios.", extended_body: "La capacidad de demostrar impacto de negocio — no solo entregar campañas sino mostrar su contribución al crecimiento del cliente — es la que más va a diferenciar a las agencias sostenibles de las que no lo serán. Los clientes van a seguir pagando bien por trabajo que pueden medir que genera valor. Van a dejar de pagar por trabajo que no puede demostrar su impacto." },
+      { heading: "Tu rol en la transformación: agente de cambio desde adentro", body: "La transformación de la industria no es algo que te pasa — es algo que podés influir desde donde estás. Las personas que entienden las fuerzas de cambio y tienen la voluntad de actuar sobre ellas son las que construyen las agencias del futuro.", extended_body: "Tres acciones concretas que cualquier persona puede tomar hoy para posicionarse para el futuro de la industria. Primero, desarrollar fluidez con IA — no como sustituto del criterio sino como amplificador. Segundo, construir capacidad de medición — aprender a conectar el trabajo creativo con métricas de negocio. Tercero, desarrollar perspectiva de negocio del cliente — entender la industria, los competidores y los objetivos estratégicos de cada cliente con la misma profundidad que un consultor." },
+    ],
+    exercise: "Escribí tu escenario personal para los próximos tres años en la industria. ¿En qué modelo de agencia querés estar trabajando? ¿Qué capacidades necesitás desarrollar para ser valioso en ese modelo? ¿Qué estás haciendo hoy que te acerca a ese escenario y qué te aleja?",
+    takeaway: "El futuro de las agencias no está determinado. Está siendo construido ahora por las personas que deciden actuar en lugar de esperar.",
+    quiz: { question: "¿Cuál de estos modelos de agencia opera principalmente upstream, antes del brief, en la definición del problema y la estrategia?", options: ["La agencia especialista", "La agencia-plataforma", "La consultora creativa", "La agencia de producción"], correct: 2, explanation: "La consultora creativa se diferencia por operar antes del brief — en la definición del problema, la estrategia y el reencuadre del desafío. Requiere capacidad de diagnóstico, lenguaje de negocio y acceso a decisores senior." },
+    resources: [
+      { type: "book", title: "The Business of Expertise", author: "David C. Baker", description: "El libro más riguroso sobre cómo posicionar una firma de servicios profesionales. Habla directamente de agencias y consultoras. Cambia la manera de pensar sobre el posicionamiento.", url: "https://www.amazon.com/Business-Expertise-Entrepreneurial-Experts-Position/dp/0692142924" },
+      { type: "book", title: "Agency: Starting a Creative Firm in the Age of Digital Marketing", author: "Rick Webb", description: "Historia y reflexión sobre cómo construir una agencia en un entorno digital. Honesto y lleno de perspectiva real.", url: "https://www.amazon.com/Agency-Starting-Creative-Digital-Marketing/dp/1491913088" },
+      { type: "podcast", title: "The Futur with Chris Do", author: "Chris Do", description: "El podcast más relevante sobre el negocio del diseño y la comunicación creativa. Chris Do habla directamente sobre cómo posicionarse en la industria que viene.", url: "https://thefutur.com/podcast" },
+      { type: "article", title: "The Future of Agencies", author: "McKinsey & Company", description: "Análisis estructural de las fuerzas que están transformando la industria de agencias. Riguroso y bien documentado.", url: "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights" },
+    ],
+  }
 ];
 
 export const activities: Activity[] = [

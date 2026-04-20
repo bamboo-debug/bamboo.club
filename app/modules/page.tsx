@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ModuleCard } from "@/components/module-card";
 import { modules } from "@/lib/mock-data";
 import { getSupabaseBrowserClient } from "@/lib/supabase-browser";
@@ -9,7 +9,7 @@ import {
   emptyRealProgress,
   loadUserProgress,
 } from "@/lib/progress";
-import type { ModuleProgress } from "@/lib/types";
+import type { Module as ModuleType, ModuleProgress } from "@/lib/types";
 
 export default function ModulesPage() {
   const [userId, setUserId] = useState<string | null>(null);
@@ -118,6 +118,61 @@ export default function ModulesPage() {
   const completedCount = realProgress.completedModules.length;
   const inProgressCount = realProgress.moduleProgress.filter((m) => !m.completed).length;
 
+  const computedModules = useMemo<ModuleType[]>(() => {
+    return modules.map((module, index) => {
+      const isCompleted = realProgress.completedModules.includes(module.id);
+
+      if (isCompleted) {
+        return {
+          ...module,
+          status: "completed" as const,
+        };
+      }
+
+      // El primer módulo siempre se puede abrir si todavía no está completo
+      if (index === 0) {
+        return {
+          ...module,
+          status: "available" as const,
+        };
+      }
+
+      const previousModule = modules[index - 1];
+      const previousCompleted = realProgress.completedModules.includes(previousModule.id);
+
+      return {
+        ...module,
+        status: previousCompleted ? ("available" as const) : ("locked" as const),
+      };
+    });
+  }, [realProgress.completedModules]);
+
+  const firstAvailableIndex = useMemo(
+    () => computedModules.findIndex((module) => module.status === "available"),
+    [computedModules]
+  );
+
+  const visibleModules = useMemo(() => {
+    // Si no está logueado, mostramos todos para explorar libremente
+    if (!userId) return computedModules;
+
+    // Si ya no hay ninguno "available", mostramos todos los completados
+    // y dejamos visible el último por seguridad
+    if (firstAvailableIndex === -1) {
+      return computedModules.filter(
+        (module) => module.status === "completed"
+      );
+    }
+
+    // Mostrar:
+    // - todos los completados
+    // - el siguiente disponible
+    return computedModules.filter((module, index) => {
+      if (module.status === "completed") return true;
+      return index === firstAvailableIndex;
+    });
+  }, [computedModules, firstAvailableIndex, userId]);
+
   if (!hydrated) {
     return (
       <main className="section">
@@ -145,13 +200,18 @@ export default function ModulesPage() {
             ideas hacia adelante.
           </p>
 
-          {!userId && (
+          {!userId ? (
             <div className="alert info" style={{ maxWidth: "62ch" }}>
               Podés leer todos los módulos libremente.{" "}
               <a href="/auth" style={{ fontWeight: 700, color: "var(--brand)" }}>
                 Creá tu cuenta
               </a>{" "}
               para guardar tu progreso y acumular XP.
+            </div>
+          ) : (
+            <div className="alert info" style={{ maxWidth: "62ch" }}>
+              Los siguientes módulos se van desbloqueando a medida que avanzás,
+              para que te concentres en el paso que sigue.
             </div>
           )}
         </div>
@@ -179,19 +239,14 @@ export default function ModulesPage() {
         )}
 
         <div className="module-track">
-          {modules.map((module) => {
+          {visibleModules.map((module) => {
             const moduleRealProgress =
               realProgress.moduleProgress.find((m) => m.moduleId === module.id) ?? null;
 
             return (
               <ModuleCard
                 key={module.id}
-                module={{
-                  ...module,
-                  status: realProgress.completedModules.includes(module.id)
-                    ? "completed"
-                    : module.status,
-                }}
+                module={module}
                 userId={userId ?? undefined}
                 realProgress={moduleRealProgress}
                 onRealAction={handleRealAction}

@@ -1,4 +1,4 @@
-// File: C:\Users\User\Documents\Ariel (1)\Ariel\Lupe\Proyectos\2026\Club de Innovadores- Bamboo\App bamboo\Bamboo mejorado 7\bamboo-app\app\leaderboard\page.tsx
+// File: C:\Users\User\Documents\Ariel (1)\Ariel\Lupe\Proyectos\2026\Club de Innovadores- Bamboo\App bamboo\Bamboo mejorado 8\bamboo-app\app\leaderboard\page.tsx
 import * as entry from '../../../../app/leaderboard/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

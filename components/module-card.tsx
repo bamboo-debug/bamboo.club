@@ -383,6 +383,41 @@ export function ModuleCard({
         <p className="body-relaxed">{module.takeaway}</p>
       </div>
 
+      {/* Recursos para profundizar */}
+      {module.resources && module.resources.length > 0 && (
+        <div className="subpanel stack-sm">
+          <strong>Para profundizar</strong>
+          <div className="grid gap-md" style={{ marginTop: 4 }}>
+            {module.resources.map((resource, idx) => (
+              <div key={idx} className="module-resource">
+                <div className="module-resource-type">
+                  {resource.type === "book" && "📚 Libro"}
+                  {resource.type === "article" && "📄 Artículo"}
+                  {resource.type === "video" && "🎬 Video"}
+                  {resource.type === "podcast" && "🎙️ Podcast"}
+                  {resource.type === "tool" && "🛠️ Herramienta"}
+                </div>
+                <div className="stack-xs">
+                  {resource.url ? (
+                    <a href={resource.url} target="_blank" rel="noopener noreferrer" className="module-resource-title">
+                      {resource.title}
+                    </a>
+                  ) : (
+                    <strong className="module-resource-title">{resource.title}</strong>
+                  )}
+                  {resource.author && (
+                    <span className="muted" style={{ fontSize: "0.85rem" }}>{resource.author}</span>
+                  )}
+                  <p className="muted" style={{ fontSize: "0.88rem", lineHeight: 1.6, marginBottom: 0 }}>
+                    {resource.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="row-between row-wrap gap-sm">
         <div className="muted">
           Para finalizar necesitás completar el ejercicio y responder el quiz.
