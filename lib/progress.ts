@@ -33,82 +33,54 @@ type ModuleProgressRow = {
   earned_points: number | null;
 };
 
+function rowToModuleProgress(row: ModuleProgressRow): ModuleProgress {
+  return {
+    moduleId: row.module_id,
+    completedSections: row.completed_sections ?? [],
+    exerciseCompleted: row.exercise_completed ?? false,
+    quizAnswered: row.quiz_answered ?? false,
+    quizCorrect: row.quiz_correct ?? false,
+    completed: row.completed ?? false,
+    earnedPoints: row.earned_points ?? 0,
+  };
+}
+
 export async function loadUserProgress(userId: string): Promise<RealProgress> {
   const supabase = getSupabaseBrowserClient();
   if (!supabase) return emptyRealProgress();
 
-  console.log("LOAD USER PROGRESS START:", userId);
-
-  let points = 0;
-  let moduleProgress: ModuleProgress[] = [];
-  let claimedActivities: string[] = [];
-
   try {
-    const { data: profile, error: profileError } = await supabase
-      .from("profiles")
-      .select("points")
-      .eq("id", userId)
-      .maybeSingle();
+    const [profileRes, moduleRes] = await Promise.all([
+      supabase.from("profiles").select("points").eq("id", userId).maybeSingle(),
+      supabase.from("module_progress").select("*").eq("profile_id", userId),
+    ]);
 
-    if (profileError) {
-      console.log("LOAD PROFILE ERROR:", profileError);
-    } else {
-      points = profile?.points ?? 0;
+    if (profileRes.error) {
+      console.log("LOAD PROFILE ERROR:", profileRes.error);
     }
-  } catch (error) {
-    console.log("LOAD PROFILE EXCEPTION:", error);
-  }
 
-  try {
-    const { data: moduleRows, error: moduleError } = await supabase
-      .from("module_progress")
-      .select("*")
-      .eq("profile_id", userId);
-
-    if (moduleError) {
-      console.log("LOAD MODULE_PROGRESS ERROR:", moduleError);
-    } else {
-      moduleProgress = ((moduleRows ?? []) as ModuleProgressRow[]).map((row) => ({
-        moduleId: row.module_id,
-        completedSections: row.completed_sections ?? [],
-        exerciseCompleted: row.exercise_completed ?? false,
-        quizAnswered: row.quiz_answered ?? false,
-        quizCorrect: row.quiz_correct ?? false,
-        completed: row.completed ?? false,
-        earnedPoints: row.earned_points ?? 0,
-      }));
+    if (moduleRes.error) {
+      console.log("LOAD MODULE_PROGRESS ERROR:", moduleRes.error);
     }
+
+    const points = profileRes.data?.points ?? 0;
+    const moduleProgress = ((moduleRes.data ?? []) as ModuleProgressRow[]).map(
+      rowToModuleProgress
+    );
+
+    return {
+      points,
+      completedModules: moduleProgress
+        .filter((m) => m.completed)
+        .map((m) => m.moduleId),
+      moduleProgress,
+      claimedActivities: [],
+      claimedPosts: [],
+    };
   } catch (error) {
-    console.log("LOAD MODULE_PROGRESS EXCEPTION:", error);
+    console.log("LOAD USER PROGRESS EXCEPTION:", error);
+    return emptyRealProgress();
   }
-
-  try {
-    const { data: activityRows, error: activityError } = await supabase
-      .from("activity_claims")
-      .select("activity_id, status")
-      .eq("profile_id", userId);
-
-    if (activityError) {
-      console.log("LOAD ACTIVITY_CLAIMS ERROR:", activityError);
-    } else {
-      claimedActivities = (activityRows ?? [])
-        .filter((a) => a.status === "approved")
-        .map((a) => a.activity_id as string);
-    }
-  } catch (error) {
-    console.log("LOAD ACTIVITY_CLAIMS EXCEPTION:", error);
-  }
-
-  const result: RealProgress = {
-    points,
-    completedModules: moduleProgress.filter((m) => m.completed).map((m) => m.moduleId),
-    moduleProgress,
-    claimedActivities,
-    claimedPosts: [],
-  };
-
-  console.log("LOAD USER PROGRESS END:", result);
-  return result;
 }
 
 async function getExistingModuleProgress(
@@ -194,6 +166,92 @@ async function saveModuleProgress(
   }
 }
 
+async function getCurrentPoints(userId: string): Promise<number> {
+  const supabase = getSupabaseBrowserClient();
+  if (!supabase) return 0;
+
+  try {
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("points")
+      .eq("id", userId)
+      .maybeSingle();
+
+    if (error) {
+      console.log("GET CURRENT POINTS ERROR:", error);
+      return 0;
+    }
+
+    return data?.points ?? 0;
+  } catch (error) {
+    console.log("GET CURRENT POINTS EXCEPTION:", error);
+    return 0;
+  }
+}
+
+async function updateProfilePoints(userId: string, newPoints: number): Promise<boolean> {
+  const supabase = getSupabaseBrowserClient();
+  if (!supabase) return false;
+
+  try {
+    const { error } = await supabase
+      .from("profiles")
+      .update({ points: newPoints })
+      .eq("id", userId);
+
+    if (error) {
+      console.log("UPDATE PROFILE POINTS ERROR:", error);
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.log("UPDATE PROFILE POINTS EXCEPTION:", error);
+    return false;
+  }
+}
+
+async function addPoints(
+  userId: string,
+  points: number,
+  sourceType: string,
+  sourceId: string,
+  description: string
+): Promise<number> {
+  const supabase = getSupabaseBrowserClient();
+  if (!supabase) return 0;
+
+  try {
+    const currentPoints = await getCurrentPoints(userId);
+    const newPoints = currentPoints + points;
+
+    const [ledgerRes, updateOk] = await Promise.all([
+      supabase.from("points_ledger").insert({
+        profile_id: userId,
+        source_type: sourceType,
+        source_id: sourceId,
+        description,
+        points,
+        reason: description,
+      }),
+      updateProfilePoints(userId, newPoints),
+    ]);
+
+    if (ledgerRes.error) {
+      console.log("POINTS_LEDGER ERROR:", ledgerRes.error);
+    }
+
+    if (!updateOk) {
+      return currentPoints;
+    }
+
+    return newPoints;
+  } catch (error) {
+    console.log("ADD POINTS EXCEPTION:", error);
+    return 0;
+  }
+}
+
 export async function completeSectionForUser(
   userId: string,
   moduleId: string,
@@ -204,7 +262,8 @@ export async function completeSectionForUser(
   const currentSections: string[] = existing?.completed_sections ?? [];
 
   if (currentSections.includes(sectionHeading)) {
-    return { ok: true };
+    const currentPoints = await getCurrentPoints(userId);
+    return { ok: true, newPoints: currentPoints };
   }
 
   const earnedPoints = (existing?.earned_points ?? 0) + xpReward;
@@ -235,7 +294,8 @@ export async function completeExerciseForUser(
   const existing = await getExistingModuleProgress(userId, moduleId);
 
   if (existing?.exercise_completed) {
-    return { ok: true };
+    const currentPoints = await getCurrentPoints(userId);
+    return { ok: true, newPoints: currentPoints };
   }
 
   const earnedPoints = (existing?.earned_points ?? 0) + xpReward;
@@ -266,7 +326,8 @@ export async function answerQuizForUser(
   const existing = await getExistingModuleProgress(userId, moduleId);
 
   if (existing?.quiz_answered) {
-    return { ok: true };
+    const currentPoints = await getCurrentPoints(userId);
+    return { ok: true, newPoints: currentPoints };
   }
 
   const xpReward = isCorrect ? 30 : 10;
@@ -304,7 +365,8 @@ export async function finalizeModuleForUser(
   }
 
   if (existing.completed) {
-    return { ok: true };
+    const currentPoints = await getCurrentPoints(userId);
+    return { ok: true, newPoints: currentPoints };
   }
 
   if (!existing.exercise_completed || !existing.quiz_answered) {
@@ -332,59 +394,3 @@ export async function finalizeModuleForUser(
   return { ok: true, newPoints };
 }
 
-async function addPoints(
-  userId: string,
-  points: number,
-  sourceType: string,
-  sourceId: string,
-  description: string
-): Promise<number> {
-  const supabase = getSupabaseBrowserClient();
-  if (!supabase) return 0;
-
-  try {
-    const { error: ledgerError } = await supabase.from("points_ledger").insert({
-      profile_id: userId,
-      source_type: sourceType,
-      source_id: sourceId,
-      description,
-      points,
-      reason: description,
-    });
-
-    if (ledgerError) {
-      console.log("POINTS_LEDGER ERROR:", ledgerError);
-    }
-  } catch (error) {
-    console.log("POINTS_LEDGER EXCEPTION:", error);
-  }
-
-  try {
-    const { data: profile, error: profileError } = await supabase
-      .from("profiles")
-      .select("points")
-      .eq("id", userId)
-      .maybeSingle();
-
-    if (profileError) {
-      console.log("LOAD PROFILE POINTS ERROR:", profileError);
-      return 0;
-    }
-
-    const newPoints = (profile?.points ?? 0) + points;
-
-    const { error: updateError } = await supabase
-      .from("profiles")
-      .update({ points: newPoints })
-      .eq("id", userId);
-
-    if (updateError) {
-      console.log("UPDATE PROFILE POINTS ERROR:", updateError);
-    }
-
-    return newPoints;
-  } catch (error) {
-    console.log("ADD POINTS EXCEPTION:", error);
-    return 0;
-  }
-}

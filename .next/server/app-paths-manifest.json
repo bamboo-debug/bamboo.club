@@ -1,8 +1,0 @@
-{
-  "/blog/page": "app/blog/page.js",
-  "/leaderboard/page": "app/leaderboard/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/exam/page": "app/exam/page.js",
-  "/page": "app/page.js",
-  "/modules/page": "app/modules/page.js"
-}
